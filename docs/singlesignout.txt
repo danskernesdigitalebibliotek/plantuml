@@ -1,11 +1,16 @@
 @startuml
+caption Single Sign Out
+
+' Skinparams
 skinparam monochrome true
 skinparam handwritten true
 
+' Participants
 actor Patron
-collections Ereolen
-control login.bib.dk
 entity "DDB CMS"
+control login.bib.dk
+collections Ereolen
+
 
 Patron->Browser: Log out.
 Browser->"DDB CMS": Log out.
@@ -44,4 +49,5 @@ else OPTION 2 - Multiple clients
 
     end
 end
+<img:http://plantuml.com/logo3.png>
 @enduml
