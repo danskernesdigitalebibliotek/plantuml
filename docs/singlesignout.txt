@@ -1,9 +1,9 @@
 @startuml
 caption Single Sign Out
 
-' Skinparams
+' Skinparams '
 skinparam monochrome true
-skinparam handwritten true
+'skinparam handwritten true
 
 ' Participants
 actor Patron
@@ -49,5 +49,5 @@ else OPTION 2 - Multiple clients
 
     end
 end
-<img:http://plantuml.com/logo3.png>
+<img:https://clicketyclick.dk/_/icons/howdysm.png>
 @enduml
