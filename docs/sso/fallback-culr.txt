@@ -1,0 +1,29 @@
+@startuml
+title Fallback for creating users in CULR
+
+' Skinparams '
+skinparam monochrome true
+'skinparam handwritten true
+
+' Participants
+
+
+Accessplatform->>BORCHK: Valid patron?
+    alt Invalid patron
+        BORCHK-->>Accessplatform: FALSE
+        Note right of BORCHK: Patron rejected
+    else Valid patron
+        BORCHK-->>Accessplatform: TRUE
+        Accessplatform->>CULR: CPR? (| lånernr)
+        alt patronID = patronNo
+            CULR-->>Accessplatform: FALSE (patronNo)
+            Note right of CULR: Patron will not becreated
+        else patronID = CPR
+            CULR->>Accessplatform: TRUE (CPR)
+            Accessplatform->>BORCHK: Get municipality
+            BORCHK->>Accessplatform: municipalityno
+            Accessplatform->>CULR: Create patron (CPR, Agency, municipalityno)
+            Note right of CULR: Patron creation
+        end
+    end
+@enduml
