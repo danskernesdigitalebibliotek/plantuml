@@ -1,5 +1,5 @@
 @startuml
-title Wayfinding
+title Wayfinding 0.1
 
 ' Skinparams '
 skinparam monochrome true
@@ -31,7 +31,7 @@ Wayfinder -> Client: Mapreference
 
 
 @startuml
-title Wayfinding
+title Wayfinding 0.1
 
 ' Skinparams '
 skinparam monochrome true
