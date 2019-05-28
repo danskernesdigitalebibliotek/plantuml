@@ -1,0 +1,29 @@
+@startuml
+title Wayfinding
+
+' Skinparams '
+skinparam monochrome true
+'skinparam handwritten true
+
+' Participants
+
+
+Client -> Wayfinder: Agency\n+ Local record id (FAUST)\n+ BranchId
+
+alt IMS
+	Wayfinder -> IMS: Local record id (FAUST)\n+ Branch (+ Agency)
+	IMS -> Wayfinder: PID
+
+	Wayfinder -> IMS: PID
+	IMS -> Wayfinder: Shelfreference
+	
+else
+	Wayfinder -> FBS: Local record id (FAUST)\n+ Branch (+ Agency)
+	FBS -> Wayfinder: Shelfreference
+end
+
+Wayfinder -> MapsPeople:  BranchId\n+ Shelfreference
+MapsPeople -> Wayfinder: POI
+
+Wayfinder -> Client: Mapreference
+@enduml
