@@ -1,4 +1,4 @@
-# Single Sign-out
+# Single Sign-on / Sign-out
 
 ## Diagrams
 - [Single Sign-out](#single-sign-out)
