@@ -92,3 +92,21 @@ Hvis felt 100 vises 1. ord (efter evt. soltegn) i 100 delfelt a
 Hvis felt 100 mangler, vises 1. ord (efter evt. soltegn) i 110 delfelt a
 Hvis felt 100 og felt 110 mangler, vises 1. ord (efter evt. soltegn) i 245 delfelt a
 -->
+
+
+## Eksempler
+
+> Roskilde > Børneafdeling > Udlånet > Den første læsning gul > Fleischer
+
+```
+001	00	*a 50936155 *b 870970 *c 20160520162335 *d 20140130 *f a
+:---	✂ --- 	✂ ---
+100	00	*a Fleischer *h Rune *4 aut *4 ill
+245	00	*a Otto møder en nisse
+260	00	*a Kbh. *b Så til Hest *c 2014
+:---	✂ --- 	✂ ---
+652	00	*n 86 *z 096
+652	00	*o sk
+666	00	*0 *s nisser
+:---	✂ --- 	✂ ---
+```
