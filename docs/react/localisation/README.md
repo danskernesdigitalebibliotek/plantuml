@@ -2,9 +2,9 @@
 
 <!--
 Kilde:
-Fra: Rolf Madsen <rom@slks.dk> 
+Fra: Rolf Madsen <@slks.dk> 
 Sendt: 29. maj 2019 09:34
-Til: Erik Bachmann Pedersen <ebp@slks.dk>
+Til: Erik Bachmann Pedersen <@slks.dk>
 Emne: SV: Openplatform - shelfmark
 -->
 
@@ -31,7 +31,7 @@ Shelfmark | Hyldemærke [<sup>1</sup>](#1) | `Greve Bibliotek > Børn > Eneståe
 Simple + Material group description | | `Greve Bibliotek > Børn > Bog > 77.693 > Revenson, Judy`
 Shelf mark + Material group description | | `Greve Bibliotek > Børn > Bog > Enestående`
 
- <a class="anchor" id="1">1)</a> Simulerer DDELibras opstilling med differentieret visning for f. eks. skøn- og faglitteratur
+ <a class="anchor" id="1"><sup>1)</sup></a> Simulerer DDELibras opstilling med differentieret visning for f. eks. skøn- og faglitteratur
 
 ## Shelfmark
 
