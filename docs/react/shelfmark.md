@@ -19,26 +19,20 @@ Under Indstillinger > Materialer > Provider availability holdings (Sti: `/admin
 Beholdningsvisningen kan bestå af forskellige niveauer for opstilling der kan konfigureres så det afspejler lokal praksis.
 
 Følgende fire niveauer vises altid:
-`Branch > Department > Location > Sublocation`
+```Branch > Department > Location > Sublocation```
 
-Derudover kan man vælge at få vist:
-    • Material group description - Materialegruppe
-    • Simple - DK5 Klassemærke + Inverteret forfatternavn
-    • Shelfmark - Hyldemærke
+Derudover kan man vælge at få vist en af følgende kombinationer:
 
-Man kan lave følgende kombinationer:
+Type| Content
+---|---
+Material group description | Materialegruppe
+Simple | DK5 Klassemærke + Inverteret forfatternavn | Greve Bibliotek > Børn > Bog > 77.693 > Revenson, Judy
+Shelfmark | Hyldemærke [<sup>1</sup>](#1) | `Greve Bibliotek > Børn > Enestående`
+Simple + Material group description | `Greve Bibliotek > Børn > Bog > 77.693 > Revenson, Judy`
+Shelf mark + Material group description | `Greve Bibliotek > Børn > Bog > Enestående`
 
-### Simple (Default konfiguration)
-Greve Bibliotek > Børn > 77.693 > Revenson, Judy
+ <a class="anchor" id="1">1)</a> Simulerer DDELibras opstilling med differentieret visning for f. eks. skøn- og faglitteratur
 
-### Simple + Material group description
-Greve Bibliotek > Børn > Bog > 77.693 > Revenson, Judy
-
-### Shelf mark (simulerer DDELibras opstilling med differentieret visning for f. eks. skøn- og faglitteratur)
-Greve Bibliotek > Børn > Enestående
-
-### Shelf mark + Material group description
-Greve Bibliotek > Børn > Bog > Enestående
 
 ## Sekvensbeskrivelse af shelfmark
 
