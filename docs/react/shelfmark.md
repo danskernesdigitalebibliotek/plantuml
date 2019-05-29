@@ -23,18 +23,20 @@ Følgende fire niveauer vises altid:
 
 Derudover kan man vælge at få vist en af følgende kombinationer:
 
-Type| Content
----|---
-Material group description | Materialegruppe
-Simple | DK5 Klassemærke + Inverteret forfatternavn | Greve Bibliotek > Børn > Bog > 77.693 > Revenson, Judy
+Type| Content | Example
+---|---|---
+Material group description | Materialegruppe | `Greve Bibliotek > Børn > Bog > Enestående`
+Simple | DK5 Klassemærke + Inverteret forfatternavn | `Greve Bibliotek > Børn > Bog > 77.693 > Revenson, Judy`
 Shelfmark | Hyldemærke [<sup>1</sup>](#1) | `Greve Bibliotek > Børn > Enestående`
-Simple + Material group description | `Greve Bibliotek > Børn > Bog > 77.693 > Revenson, Judy`
-Shelf mark + Material group description | `Greve Bibliotek > Børn > Bog > Enestående`
+Simple + Material group description | | `Greve Bibliotek > Børn > Bog > 77.693 > Revenson, Judy`
+Shelf mark + Material group description | | `Greve Bibliotek > Børn > Bog > Enestående`
 
  <a class="anchor" id="1">1)</a> Simulerer DDELibras opstilling med differentieret visning for f. eks. skøn- og faglitteratur
 
 
 ## Sekvensbeskrivelse af shelfmark
+
+![Kombination til shelfmark](http://www.plantuml.com/plantuml/proxy?src=https://danskernesdigitalebibliotek.github.io/plantuml/react/shelfmark.txt)
 
 1. Hvis felt `652` delfelt `m` = `sk`
    1. Hvis felt `100` og felt `110` mangler vises 1. ord (efter evt. soltegn) i `245` delfelt `a`
