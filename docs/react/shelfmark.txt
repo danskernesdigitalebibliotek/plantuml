@@ -1,0 +1,62 @@
+@startuml
+title Shelfmark
+
+' Skinparams '
+skinparam monochrome true
+'skinparam handwritten true
+
+' Participants
+start
+
+if (""652"" *""m"" == "sk" ) then (yes)
+    if (exists ""100"") then (yes)
+        :Show first word \n(alfabetised ¤) \nfrom ""100"" *""a"";
+    else (no)
+        if (exists ""110"") then (yes)
+            :Show first word \n(alfabetised ¤) \nfrom ""110"" *""a"";
+        else (no)
+            :Show first word \n(alfabetised ¤) \nfrom ""245"" *""a"";
+        endif
+    endif
+else (no)
+
+    if (exists ""039"") then (yes)
+        :Show first word \n(alfabetised ¤) \nfrom ""039"" *""a"" + *""b""\nwith expansion of coded values;
+
+        if (exists ""100"") then (yes)
+            :Show first word \n(alfabetised ¤) \nfrom ""100"" *""a"";
+        else (no)
+            if (exists ""110"") then (yes)
+                :Show first word \n(alfabetised ¤) \nfrom ""110"" *""a"";
+            else (no)
+                if (exists ""239"") then (yes)
+                    :Show first word \n(alfabetised ¤) \nfrom ""239"" *""a"";
+                else (no)
+                    :Show first word \n(alfabetised ¤) \nfrom ""245"" *""a"";
+                endif
+            endif
+        endif
+    else (no)
+
+        if (exists ""652"" *""b"") then (yes)
+            :Show first word \n(alfabetised ¤) \nfrom ""652"" *""m"" + *""b"";
+        else (no)
+            :Show first word \n(alfabetised ¤) \nfrom ""652"" *""m"" + *""h""\n(Comments to ""652"" *""m"" are ignored);
+            
+            
+            if (exists ""100"") then (yes)
+                :Show first word \n(alfabetised ¤) \nfrom ""100"" *""a"";
+            else (no)
+                if (exists ""110"") then (yes)
+                    :Show first word \n(alfabetised ¤) \nfrom ""110"" *""a"";
+                else (no)
+                    :Show first word \n(alfabetised ¤) \nfrom ""245"" *""a"";
+                endif
+            endif
+        endif
+    endif
+endif
+
+
+stop
+@enduml
