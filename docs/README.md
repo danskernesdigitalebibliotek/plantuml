@@ -1,40 +1,10 @@
-""" Build index from directory listing
-
-make_index.py </path/to/directory> [--header <header text>]
-"""
-
-INDEX_TEMPLATE = r"""
-<html>
-<body>
-<h2>${header}</h2>
-<p>
-% for name in names:
-    <li><a href="${name}">${name}</a></li>
-% endfor
-</p>
-</body>
-</html>
-"""
-
-EXCLUDED = ['index.html']
-
-import os
-import argparse
-
-# May need to do "pip install mako"
-from mako.template import Template
+PlantUML diagrams by category
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("directory")
-    parser.add_argument("--header")
-    args = parser.parse_args()
-    fnames = [fname for fname in sorted(os.listdir(args.directory))
-              if fname not in EXCLUDED]
-    header = (args.header if args.header else os.path.basename(args.directory))
-    print(Template(INDEX_TEMPLATE).render(names=fnames, header=header))
 
-
-if __name__ == '__main__':
-    main()
+Name	| Latest commit message
+---|---
+[listServices](listServices)	| Global list service for library clients
+[React components](react)		| Generic REACT components
+[Single Sign-on](sso)			| Single sign on/out and fallback for CULR
+[Wayfinder](wayfinder)			| Logical flow for data in Wayfinder
