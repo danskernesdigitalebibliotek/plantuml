@@ -1,5 +1,5 @@
 @startuml
-title Wayfinding 0.3
+title Wayfinding 0.3.1
 
 ' Skinparams '
 skinparam monochrome true
@@ -33,7 +33,7 @@ Wayfinder -> Client: Mapreference
 
 legend right
   Shelfmark is NOT available from FBS.
-  Must be requested from Libby - or upcomming REAC component
+  Must be requested from Libby - or upcomming REACT component
 endlegend
 @enduml
 
