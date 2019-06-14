@@ -16,6 +16,58 @@ collections Ereolen
 Patron->Browser: Log in
 Browser->"DDB CMS": Log in
 "DDB CMS"->login.bib.dk: Request authentification of user
+
+alt User is logged in (login cookie)
+    Login.bib.dk->"DDB CMS": Return GUID, session token and active agencies for userID
+    "DDB CMS"->Browser: User logged in
+else
+    login.bib.dk->Browser: Get Agency, userID and PIN
+    Browser->Patron: Enter Agency, userID and PIN
+    Patron->Browser: Agency, userID and PIN
+    Browser->login.bib.dk: Agency, userID and PIN
+
+    login.bib.dk->BORCHK: Agency, userID and PIN
+
+    BORCHK->ILS: Authenticate: Agency, userID and PIN
+
+    alt BORCHK: FALSE (User rejected)
+        BORCHK->login.bib.dk: User rejected
+        login.bib.dk->Browser: Login failed
+    else BORCHK: TRUE (User authenticated)
+        BORCHK->login.bib.dk: User authenticated
+        login.bib.dk->CULR: Get profile for userID@Agency
+        alt CULR has no profile
+            note right: Create profile for userID@Agency with muncipality ID
+        end
+        CULR->Login.bib.dk: Return GUID and active agencies for userID
+        Login.bib.dk->Browser: Set login cookie
+        Login.bib.dk->"DDB CMS": Return GUID, session token and active agencies for userID
+        "DDB CMS"->Browser: User logged in
+    end
+end
+@enduml
+
+
+
+
+@startuml
+caption User authentification (Adgangsplatformen)
+'Single Sign On
+
+' Skinparams '
+skinparam monochrome true
+'skinparam handwritten true
+
+' Participants
+actor Patron
+entity "DDB CMS"
+control login.bib.dk
+collections Ereolen
+
+
+Patron->Browser: Log in
+Browser->"DDB CMS": Log in
+"DDB CMS"->login.bib.dk: Request authentification of user
 login.bib.dk->Browser: Get Agency, userID and PIN
 Browser->Patron: Enter Agency, userID and PIN
 Patron->Browser: Agency, userID and PIN
