@@ -1,0 +1,27 @@
+@startuml
+title User redirect in proxy
+' @version 2019-07-11T16:19:39
+' @author Erik Bachmann (ebp@slks.dk)
+
+' Skinparams '
+skinparam monochrome true
+'skinparam handwritten true
+
+' Participants
+
+User -> Client: Login
+Client -> Adgangsplatform: Login
+Adgangsplatform --> CULR: Get user domain
+CULR --> Adgangsplatform: Domain GUID, Agencies, Home Municipality
+Adgangsplatform -> Client: Domain
+
+alt Local user: Client municipality == User home municipality
+    Client -> Local_proxy: Auto login 
+    Local_proxy -> Client: Session
+else Foreign user
+    Client -> Foreign_proxy: Auto login
+    Foreign_proxy -> Client: Session
+end
+
+Client -> Remote_service: Access via session
+@enduml
