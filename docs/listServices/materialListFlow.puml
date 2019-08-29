@@ -1,0 +1,25 @@
+@startuml						
+title   Material List flow
+						
+' Skinparams '						
+skinparam monochrome true						
+'skinparam handwritten true						
+
+
+boundary "DDB CMS"
+boundary "oAuth"
+boundary "Adgangsplatform"
+database "Material list"
+
+"DDB CMS" -> "oAuth" : Client_id
+"oAuth" --> "DDB CMS" : ClientToken
+
+"DDB CMS" -> "Adgangsplatform" : CPR
+"Adgangsplatform" --> "DDB CMS": UserToken + GUID
+
+"DDB CMS" -> "Material list" : ClientToken + GUID (+ listId)
+"Material list" -> "Adgangsplatform" : ClientToken
+"Adgangsplatform" --> "Material list" : OK 
+"Material list" --> "DDB CMS" : List
+
+@enduml
