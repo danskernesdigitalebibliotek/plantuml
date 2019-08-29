@@ -10,3 +10,7 @@ PlantUML diagrams for DDB infrastructure components
 ![Single Sign-out](http://www.plantuml.com/plantuml/proxy?src=https://danskernesdigitalebibliotek.github.io/plantuml/sso/fallback-culr.txt)
 ## Single Sign-out
 ![Single Sign-out](http://www.plantuml.com/plantuml/proxy?src=https://danskernesdigitalebibliotek.github.io/plantuml/sso/singlesignout.txt)
+
+## Material List flow
+![Single Sign-out](http://www.plantuml.com/plantuml/proxy?src=https://danskernesdigitalebibliotek.github.io/plantuml/listServices/materialListFlow.puml)
+
