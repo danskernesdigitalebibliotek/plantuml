@@ -1,0 +1,32 @@
+@startuml
+title
+    Subscription Service  
+end title
+
+' Removing color and border from cards
+skinparam cardBorderColor none
+skinparam cardBackgroundColor none
+skinparam cardShadowing false
+skinparam defaultFontName Courier
+'skinparam defaultFontName Lucinda Sans Typewriter
+
+
+class Subscribtion {
+	{field}	GUID                : String
+	{field}	ServiceID           : String
+	{field}	Key                 : String
+	{field}	Agency              : String
+	{field}	CreateDate          : String ISO-8601
+	{field}	ModificationDate    : String ISO-8601
+	{field}	Active              : Boolean
+	{field}	Data                : String
+
+	+{method}	getUserSubscription( $GUID, {$Service}, {$Key}, {$Agency}  )
+	+{method}	putUserSubscription( $GUID, $Service, $Key, {$Agency}, $Active, {$Data} )
+	~createDate( $GUID, $Service, $Key, {$Agency} )
+	~modifyDate( $GUID, $Service, $Key, {$Agency} )
+
+}
+
+'listfonts
+@enduml
