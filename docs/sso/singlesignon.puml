@@ -8,9 +8,12 @@ skinparam monochrome true
 
 ' Participants
 actor Patron
+boundary Browser
 entity "DDB CMS"
-control login.bib.dk
-collections Ereolen
+control "login.bib.dk"
+boundary BORCHK
+boundary ILS
+boundary CULR
 
 
 Patron->Browser: Log in
@@ -18,7 +21,7 @@ Browser->"DDB CMS": Log in
 "DDB CMS"->login.bib.dk: Request authentification of user
 
 alt User is logged in (login cookie)
-    Login.bib.dk->"DDB CMS": Return GUID, session token and active agencies for userID
+    login.bib.dk->"DDB CMS": Return GUID, session token and active agencies for userID
     "DDB CMS"->Browser: User logged in
 else
     login.bib.dk->Browser: Get Agency, userID and PIN
@@ -39,9 +42,9 @@ else
         alt CULR has no profile
             note right: Create profile for userID@Agency with muncipality ID
         end
-        CULR->Login.bib.dk: Return GUID and active agencies for userID
-        Login.bib.dk->Browser: Set login cookie
-        Login.bib.dk->"DDB CMS": Return GUID, session token and active agencies for userID
+        CULR->login.bib.dk: Return GUID and active agencies for userID
+        login.bib.dk->Browser: Set login cookie
+        login.bib.dk->"DDB CMS": Return GUID, session token and active agencies for userID
         "DDB CMS"->Browser: User logged in
     end
 end
