@@ -5,14 +5,13 @@ title   Material List flow
 skinparam monochrome true						
 'skinparam handwritten true						
 
-
 boundary "DDB CMS"
 boundary "oAuth"
 boundary "Adgangsplatform"
 database "Material list"
 
-note left of oAuth : auth.dbc.dk
-note right of Adgangsplatform : login.bib.dk
+note over oAuth : auth.dbc.dk
+note over Adgangsplatform : login.bib.dk
 
 "DDB CMS" -> "oAuth" : Client_id
 "oAuth" --> "DDB CMS" : ClientToken
