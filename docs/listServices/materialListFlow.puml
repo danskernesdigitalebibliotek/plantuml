@@ -17,8 +17,8 @@ database "Material list"
 "DDB CMS" -> "Adgangsplatform" : CPR
 "Adgangsplatform" --> "DDB CMS": UserToken + GUID
 
-"DDB CMS" -> "Material list" : ClientToken + GUID (+ listId)
-"Material list" -> "Adgangsplatform" : ClientToken
+"DDB CMS" -> "Material list" : UserToken + GUID (+ listId)
+"Material list" -> "Adgangsplatform" : UserToken
 "Adgangsplatform" --> "Material list" : OK 
 "Material list" --> "DDB CMS" : List
 
