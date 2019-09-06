@@ -11,6 +11,9 @@ boundary "oAuth"
 boundary "Adgangsplatform"
 database "Material list"
 
+note left of oAuth : auth.dbc.dk
+note right of Adgangsplatform : login.bib.dk
+
 "DDB CMS" -> "oAuth" : Client_id
 "oAuth" --> "DDB CMS" : ClientToken
 
