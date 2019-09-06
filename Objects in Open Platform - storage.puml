@@ -1,0 +1,30 @@
+@startuml
+title
+    Objects in Open Platform  /storage
+end title
+
+
+/' 
+AS a service I can PUT a JSON object in /storage
+'/
+
+:Service: --> (PUT a JSON object)
+(PUT a JSON object) --> :"/storage":
+
+/'
+AS a service I can GET a JSON object from /storage
+'/
+
+:Service: --> (GET a JSON object)
+(GET a JSON object) --> :"/storage":
+
+
+/'
+AS a secondary service I can GET a JSON object from /storage
+'/
+
+:Service2: --> (GET a JSON object)
+(GET a JSON object) --> :"/storage":
+
+
+@enduml
