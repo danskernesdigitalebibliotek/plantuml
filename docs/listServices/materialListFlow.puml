@@ -7,7 +7,7 @@ skinparam monochrome true
 
 boundary "DDB CMS"
 boundary "oAuth /\n[[https://auth.dbc.dk auth.dbc.dk]]" as oAuth
-boundary "Adgangsplatform /\n[[https://login.bib.dk/oauth/authorize login.bib.dk]]" as Adgangsplatform
+boundary "Adgangsplatform /\n[[https://login.bib.dk/ login.bib.dk]]" as Adgangsplatform
 database "Material list"
 
 'note over oAuth : auth.dbc.dk
