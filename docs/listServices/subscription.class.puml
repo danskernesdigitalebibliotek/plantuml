@@ -9,7 +9,7 @@ skinparam cardBackgroundColor none
 skinparam cardShadowing false
 skinparam defaultFontName Courier
 'skinparam defaultFontName Lucinda Sans Typewriter
-skinparam BackgroundColor White
+'skinparam BackgroundColor White
 
 skinparam class {
 	BackgroundColor White
@@ -34,4 +34,3 @@ class Subscribtion {
 
 'listfonts
 @enduml
-
