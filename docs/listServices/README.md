@@ -36,3 +36,10 @@ Ding Mobile Search -> CMS Contents Service (Open Platform)
 
 DDB CMS Services (Rest)
 
+## Material List Flow
+![Class](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&idx=0&src=https://danskernesdigitalebibliotek.github.io/plantuml/listServices/materialListFlow.puml)
+
+## Subscribtion service Class
+![Class](http://www.plantuml.com/plantuml/proxy?src=https://danskernesdigitalebibliotek.github.io/plantuml/listServices/subscription.class.puml)
+
+
