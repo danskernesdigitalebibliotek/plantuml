@@ -12,7 +12,7 @@ skinparam defaultFontName Courier
 skinparam BackgroundColor White
 
 skinparam class {
-skinparam BackgroundColor White
+	BackgroundColor White
 }
 
 class Subscribtion {
