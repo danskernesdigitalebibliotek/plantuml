@@ -9,6 +9,7 @@ skinparam cardBackgroundColor none
 skinparam cardShadowing false
 skinparam defaultFontName Courier
 'skinparam defaultFontName Lucinda Sans Typewriter
+skinparam BackgroundColor White
 
 
 class Subscribtion {
