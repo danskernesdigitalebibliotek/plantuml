@@ -5,10 +5,8 @@ title Push information channels (draft)
 skinparam monochrome true
 
 ' Participants
-'[DDBCMS]     as "DDB CMS"
-'[Redia]
 
-frame "FBS" {
+frame FBS as "FBS" {
 	[SMS]
 	[EMAIL]
 	[PUSH]
@@ -20,8 +18,9 @@ frame DDBCMS as "DDB CMS" {
 	[PUSHx] as "&#9746; PUSH"
   }
 
-note left of DDBCMS: User checks "Recieve service messages"
-note left of FBS: LMS sends messages on event
+note left of FBS: LMS sends messages on event.
+note top of DDBCMS: User checks "Recieve service messages"
+
 
 frame PUSHserver as "PUSH server" {
 }
