@@ -1,0 +1,27 @@
+@startuml
+title User loan data flow
+
+' Removing color and border from cards
+skinparam monochrome true
+
+' Participants
+[FBS]
+[Serviceplatform] as SP
+[DST]
+[Factor]
+[LoanHistory] as LH
+[CMS]
+[APP]
+
+' Data FBS -> Factor
+FBS -> SP: Transactions
+SP -> DST: Transactions
+DST --> Factor: Anonymous\ntransactions
+
+' Data FBS to user
+FBS -> SP: Transactions2
+SP --> LH: Transactions2
+LH --> CMS: Individual\nloan history
+LH --> APP: Individual\nloan history
+
+@enduml
