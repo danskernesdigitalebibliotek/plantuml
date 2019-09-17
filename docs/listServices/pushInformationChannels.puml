@@ -1,0 +1,54 @@
+@startuml
+title Push information channels (draft)
+
+' Removing color and border from cards
+skinparam monochrome true
+
+' Participants
+'[DDBCMS]     as "DDB CMS"
+'[Redia]
+
+frame "FBS" {
+	[SMS]
+	[EMAIL]
+	[PUSH]
+  }
+
+frame DDBCMS as "DDB CMS" {
+	[SMSx] as "&#9744; SMS"
+	[EMAILx] as "&#9744; emailS"
+	[PUSHx] as "&#9746; PUSH"
+  }
+
+note left of DDBCMS: User checks "Recieve service messages"
+note left of FBS: LMS sends messages on event
+
+frame PUSHserver as "PUSH server" {
+}
+
+frame SMSgateway as "SMS gateway" {
+}
+
+frame MAILserver as "Mail server" {
+}
+
+SMSx --> SMS
+EMAILx --> EMAIL
+PUSHx --> PUSH
+
+PUSH --> PUSHserver
+SMS --> SMSgateway
+EMAIL --> MAILserver
+
+
+SMSgateway --> Mobile
+MAILserver --> MailBox
+
+
+node "Device" {
+  PUSHserver --> PUSHclient
+  [App1] -- PUSHclient
+  [App2] -- PUSHclient
+} 
+
+@enduml
