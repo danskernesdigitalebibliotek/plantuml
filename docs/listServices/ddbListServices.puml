@@ -1,0 +1,29 @@
+@startuml
+title DDB list services
+
+' Removing color and border from cards
+skinparam monochrome true
+
+' Participants
+[DDBCMS]     as "DDB CMS"
+[APP]       as "DDB App"
+[MatList]    as "Material\nList"
+[SubService] as "Subscription"
+[Loans]         as "Loan\nhistory"
+[Searchs]        as "Folow\nsearches"
+
+
+DDBCMS --> Loans
+DDBCMS --> MatList
+DDBCMS --> Searchs
+
+APP --> Loans
+APP --> MatList
+APP --> Searchs
+
+Loans --> SubService
+MatList --> SubService
+Searchs --> SubService
+
+
+@enduml
