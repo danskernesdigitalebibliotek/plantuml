@@ -1,7 +1,7 @@
 # Liste service
 
-Migrering af eksisterende lister
-Udstilling Open Platform
+- Migrering af eksisterende lister
+- Udstilling Open Platform
 
 ## Hvilke data har vi?
 
@@ -10,11 +10,10 @@ Udstilling Open Platform
 - VoxB
 - Open List
 - BPI
-- VoxB
 
 ### CMS
 
-#### Kalederstyret
+#### Kalenderstyret
 - Nyheder
 - Arrangementer
 
@@ -32,9 +31,14 @@ Udstilling Open Platform
 
 ### Udstilling af data
 
-Ding Mobile Search -> CMS Contents Service (Open Platform)
-
-DDB CMS Services (Rest)
+- DDB CMS - Ding_mobilesearch modulet -> Open Platform /CMS eller https://cmscontent.dbc.dk/.
+- DDB CMS - Services modulet:
+  - [URL]/services/news_list
+  - [URL]/services/event_list
+- APP feeds
+  - Arrangementer: [URL]/ding-redia-rss/event
+  - Nyheder: [URL]/ding-redia-rss/news
+  - Materialekarruseller: [URL]/ding/variables
 
 ## Material List Flow
 ![Class](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&idx=0&src=https://danskernesdigitalebibliotek.github.io/plantuml/listServices/materialListFlow.puml)
