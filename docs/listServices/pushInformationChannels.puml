@@ -14,12 +14,12 @@ frame FBS as "FBS" {
 
 frame DDBCMS as "DDB CMS" {
 	[SMSx] as "&#9744; SMS"
-	[EMAILx] as "&#9744; emailS"
+	[EMAILx] as "&#9744; email"
 	[PUSHx] as "&#9746; PUSH"
   }
 
-note left of FBS: LMS sends messages on event.
 note top of DDBCMS: User checks "Recieve service messages"
+note left of FBS: LMS sends messages on event.
 
 
 frame PUSHserver as "PUSH server" {
