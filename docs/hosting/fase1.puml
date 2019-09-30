@@ -1,0 +1,32 @@
+@startuml
+
+title Hosting - Fase 1
+
+
+node "Cloud" as cloud {
+    package "Redmine" {
+        component [Issue tracker] as IssueCms
+        component [Wiki] as WikiCms
+        database "Redmine Data Storage" as dbRedmine {
+        } 
+    }
+    package "Docker" {
+        component [Follow search] as FS
+        component [Loan History] as LH
+    }
+} 
+
+database "Data Storage" {
+    [Loan Histories] as tLH
+    [Saved searches] as tFS
+}
+
+'cloud -hidden-> "Data Storage"
+
+IssueCms --> dbRedmine
+WikiCms --> dbRedmine
+
+FS -down-> tFS
+LH -down-> tLH
+
+@enduml
