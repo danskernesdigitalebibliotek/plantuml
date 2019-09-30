@@ -1,0 +1,36 @@
+<html>
+<header>
+
+<script>
+
+function pumlproxy( raw ) {
+    // https://raw.githubusercontent.com/danskernesdigitalebibliotek/plantuml/master/docs/hosting/fase1.puml
+
+    str = raw.substr( 62, raw.length );
+    console.log( str );
+    str = str.replace("/master/docs/", "/");
+    console.log( str );
+    purl = "http://www.plantuml.com/plantuml/proxy?src=https://danskernesdigitalebibliotek.github.io" + str;
+    
+    // document.getElementById("puml").src=
+    console.log( document.getElementById("puml").src );
+    document.getElementById("puml").src = purl;
+}
+
+
+
+</script>
+</header>
+<body>
+
+
+<img id="puml" src="xx"></img>
+
+
+<script>
+pumlproxy( "https://raw.githubusercontent.com/danskernesdigitalebibliotek/plantuml/master/docs/hosting/fase1.puml" );
+
+</script>
+</body>
+
+</html>
