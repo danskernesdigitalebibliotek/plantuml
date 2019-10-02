@@ -1,0 +1,33 @@
+@startuml
+Title Docker Containers
+
+rectangle Containers {
+    node mynodea [
+        App a
+        ====
+        bins/libs
+    ]
+
+    node mynodeb [
+        App b
+        ====
+        bins/libs
+    ]
+}
+
+rectangle host {
+
+    node mynodec [
+        <b>Containers</b>
+        ====
+        Docker Engine
+        ----
+        Host OS
+        ....
+        Server HW
+    ]
+}
+
+Containers -[hidden]- host
+
+@endtuml
