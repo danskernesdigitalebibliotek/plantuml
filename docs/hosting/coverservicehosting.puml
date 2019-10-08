@@ -1,6 +1,6 @@
 @startuml
 
-title Cover Service Hosting - med ansvar
+title Cover Service Hosting - med ansvar.
 
 '>>> Skinparam
 skinparam LegendBackgroundColor White
