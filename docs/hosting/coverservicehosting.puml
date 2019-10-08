@@ -1,6 +1,6 @@
 @startuml
 
-title Cover Service Hosting - med ansvar
+title Cover Service hosting
 
 '>>> Skinparam
 skinparam LegendBackgroundColor White
@@ -12,6 +12,11 @@ skinparam node {
 '	borderColor<<developer>> Red
 	borderColor Red
 	
+}
+
+skinparam package {
+'"Front End" <<developer>>
+	borderColor<<developer>> Red
 }
 
 skinparam database {
@@ -27,22 +32,22 @@ skinparam database {
 
 legend top right
 |= |= Type |
-|<back:Red>   </back>| Developer |
+|<back:#FF0000>   </back>| Developer |
 |<back:Green>   </back>| External |
 |<back:Magenta>   </back>| Drift |
 |<back:Blue>   </back>| Hosting |
 endlegend
 
 '>>> Components
-package "Front End" {
+package "Front End" <<developer>> {
     component [Upload] as GUI
 }
 
-'database "FACTOR" <<external>> {
-database "FACTOR" {
+'database "FKCTOR" <<external>> {
+database "FAKTOR" {
 }
 
-node "Server"  <<hosting>> {
+node "Server HW"  <<hosting>> as Server {
     node "Container" <<developer>> {
         node "Cover Service" as CS {
             [getCover]
@@ -67,7 +72,8 @@ node "Server"  <<hosting>> {
         [Log Data]
     }
     
-    node "OS"  <<drift>> {
+    'node ".\t\tOS\t\t."  <<drift>> as OS {
+    node "Operating System"  <<drift>> as OS {
     
     }
 
@@ -92,7 +98,7 @@ GET -- [getCover]
 PUT -- [putCover]
 DELETE -- [deleteCover]
 UPDATE -- [updateCover]
-FACTOR -- GETS
+FAKTOR -- GETS
 GETS -- [Log Data]
 
 [getCover] .. [Meta Data]
