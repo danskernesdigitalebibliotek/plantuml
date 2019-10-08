@@ -1,0 +1,109 @@
+@startuml
+
+title Cover Service 
+
+'>>> Skinparam
+skinparam LegendBackgroundColor White
+
+skinparam node {
+	'backgroundColor CM Yellow
+	borderColor<<drift>> Magenta
+	borderColor<<hosting>> Blue
+'	borderColor<<developer>> Red
+	borderColor Red
+	
+}
+
+skinparam database {
+    borderColor Green
+'    borderColor<<shared node>> Magenta
+    borderColor<<drift>> Magenta
+'    borderColor<<external>> Green
+    borderColor<<hosting>> Blue
+    borderThickness<<shared node>> 3
+}
+'<<< Skinparam
+
+
+legend top right
+|= |= Type |
+|<back:Red>   </back>| Developer |
+|<back:Green>   </back>| External |
+|<back:Magenta>   </back>| Drift |
+|<back:Blue>   </back>| Hosting |
+endlegend
+
+'>>> Components
+package "Front End" {
+    component [Upload] as GUI
+}
+
+'database "FACTOR" <<external>> {
+database "FACTOR" {
+}
+
+node "Server"  <<hosting>> {
+    node "Container" <<developer>> {
+        node "Cover Service" as CS {
+            [getCover]
+            [putCover]
+            [deleteCover]
+            [updateCover]
+        
+            interface "getCover/" as GET
+            interface "putCover/" as PUT
+            interface "deleteCover/" as DELETE
+            interface "updateCover/" as UPDATE
+            interface "getStat/" as GETS
+        }   /' Cover Service '/
+    }   /' Container '/
+
+    node "Container Manager" <<drift>> as CM {
+    
+    }
+
+    database "CoverDB" <<drift>> {
+        [Meta Data]
+        [Log Data]
+    }
+    
+    node "OS"  <<drift>> {
+    
+    }
+
+} /' Server '/
+
+database "Cloudinary" {
+    [Stored covers]
+}
+
+'<<< Components
+
+'>>> Relations
+
+Container --- CM
+CM -down- OS
+
+GUI -- GET
+GUI -- PUT
+GUI .. DELETE
+
+GET -- [getCover]
+PUT -- [putCover]
+DELETE -- [deleteCover]
+UPDATE -- [updateCover]
+FACTOR -- GETS
+GETS -- [Log Data]
+
+[getCover] .. [Meta Data]
+[putCover] .. [Meta Data]
+[deleteCover] .. [Meta Data]
+[updateCover] .. [Meta Data]
+
+[getCover] .. [Stored covers]
+[putCover] .. [Stored covers]
+[deleteCover] .. [Stored covers]
+[updateCover] .. [Stored covers]
+
+'<<< Relations
+@enduml
