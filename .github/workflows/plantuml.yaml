@@ -23,3 +23,15 @@ jobs:
           pattern: "*.svg"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate images from diagrams
+        uses: docker://miy4/plantuml
+        with:
+          args: "./docs/hosting/*.puml -tsvg"
+      - name: Commit updated diagram images
+        uses: EndBug/add-and-commit@v2.1.0
+        with:
+          message: Update PlantUML diagram images
+          path: "./docs/hosting"
+          pattern: "*.svg"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
