@@ -1,6 +1,6 @@
 @startuml
 
-title Cover Service hosting
+title Cover Service Hosting
 
 '>>> Skinparam
 skinparam LegendBackgroundColor White
