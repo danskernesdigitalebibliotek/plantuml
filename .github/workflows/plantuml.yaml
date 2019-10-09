@@ -35,3 +35,16 @@ jobs:
           pattern: "*.svg"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+# Generate PNG as well
+      - name: Generate images from diagrams
+        uses: docker://miy4/plantuml
+        with:
+          args: "./docs/**/*.puml -tpng"
+      - name: Commit updated diagram images
+        uses: EndBug/add-and-commit@v2.1.0
+        with:
+          message: Update PlantUML diagram images
+          path: "./docs/**"
+          pattern: "*.png"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
