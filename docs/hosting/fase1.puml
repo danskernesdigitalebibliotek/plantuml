@@ -1,6 +1,6 @@
 @startuml
 
-title Hosting - Fase 1
+title Hosting - Fase 1 .
 
 node "Cloud" as cloud {
     package "Redmine" {
