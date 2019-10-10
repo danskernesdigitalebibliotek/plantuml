@@ -1,6 +1,6 @@
 @startuml
 
-title "Cover Service"
+title Cover Service Sequence
 
 'actor User
 boundary "DDB CMS / App" as CLIENT
