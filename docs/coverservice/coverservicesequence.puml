@@ -2,9 +2,7 @@
 
 title Cover Service Sequence diagram
 
-'actor User
 boundary "DDB CMS / App" as CLIENT
-'boundary "Bibliotekt App" as APP
 entity "Cover Service" as COVER
 
 
@@ -16,7 +14,7 @@ database "Cover DB" as CoverDB
 database "Vendor file list" as VENDORS
 database "OpenPlatform/Search" as OPsearch
 
-==Client request==
+== Client request ==
 
 CLIENT --> COVER: PID + acces_token
 COVER --> refMetaDB: Key + type
@@ -26,8 +24,7 @@ COVER --> refMetaDB: Key + type
 COVER <-- refMetaDB: URL / data
 CLIENT <-- COVER: URL
 
-==Batch Upload==
-'title "Cover Service - Client request"
+== Batch Upload ==
 
 UPLOAD -> VENDORS: Update request (get increment)
 UPLOAD <-- VENDORS: New entries (ID + image)
