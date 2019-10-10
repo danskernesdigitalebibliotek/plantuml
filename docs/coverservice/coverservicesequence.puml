@@ -1,0 +1,39 @@
+@startuml
+
+title Cover Service Sequence
+
+'actor User
+boundary "DDB CMS / App" as CLIENT
+'boundary "Bibliotekt App" as APP
+entity "Cover Service" as COVER
+
+
+database "Reference Table" as refMetaDB
+control "Upload" as UPLOAD
+database "Source table" as souMetaDB
+database "Cover DB" as CoverDB
+
+database "Vendor file list" as VENDORS
+database "OpenPlatform/Search" as OPsearch
+
+==Client request==
+
+CLIENT --> COVER: PID + acces_token
+COVER --> refMetaDB: Key + type
+COVER --> CoverDB: REfID
+COVER <-- CoverDB: URL / data
+COVER --> refMetaDB: Key + type
+COVER <-- refMetaDB: URL / data
+CLIENT <-- COVER: URL
+
+==Batch Upload==
+'title "Cover Service - Client request"
+
+UPLOAD -> VENDORS: Update request (get increment)
+UPLOAD <-- VENDORS: New entries (ID + image)
+UPLOAD -> OPsearch: ID (ISBN, ISSN ..)
+UPLOAD <-- OPsearch: PID
+UPLOAD -> refMetaDB: Reference data (ID + PID..)
+UPLOAD -> COVER: ID + file
+
+@startuml
