@@ -33,4 +33,4 @@ UPLOAD <-- OPsearch: PID
 UPLOAD -> refMetaDB: Reference data (ID + PID..)
 UPLOAD -> COVER: ID + file
 
-@startuml
+@enduml
