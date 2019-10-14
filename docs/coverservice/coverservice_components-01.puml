@@ -1,0 +1,47 @@
+@startuml
+
+title Cover Service - Component Diagram
+' Source: https://www.draw.io/#Hdanskernesdigitalebibliotek%2Fdiagrams%2Fmaster%2FCoverServiceArchitecture.svg
+' https://github.com/danskernesdigitalebibliotek/diagrams/blob/master/CoverServiceArchitecture.svg
+
+package "DDB CMS" as CMS {
+    component [Show cover] as SHOW
+}
+
+
+node "DBC" {
+    [MoreInfo Logic] as MORELOGIC
+    interface "MoreInfo Service"  as MOREINFO
+    interface "MoreInfo Upload Service"  as UFO
+    [MoreInfo Mapping] as MOREMAPPING
+
+    database "Datawell" {
+        [Stored Metadata] as META
+        [HasCoverIndex] as HASCOVER
+    }
+    database "MoreInfo Raw Store" {
+        [Stored images] as MOREIMAGE
+    }
+} 
+
+database "PressReader" {
+    [PressReader FTP] as PRESSFTP
+}
+
+database "Bogportalen" {
+    [Bogportalen FTP] as BOGFTP
+}
+
+SHOW --> META
+SHOW --> MOREINFO
+CMS --> HASCOVER
+MOREINFO -- MORELOGIC
+MORELOGIC -- MOREIMAGE
+MOREMAPPING -down-- PRESSFTP
+MOREMAPPING -down-- BOGFTP
+MOREMAPPING -- MOREIMAGE
+MOREMAPPING -> HASCOVER
+CMS -- UFO
+UFO -- MORELOGIC
+MORELOGIC -- MOREIMAGE
+@enduml
