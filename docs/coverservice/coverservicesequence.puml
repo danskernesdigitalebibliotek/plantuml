@@ -1,6 +1,6 @@
 @startuml
 
-title Cover Service Sequence Diagram
+title Cover Service - Sequence Diagram
 
 boundary "DDB CMS / App" as CLIENT
 entity "Cover Service" as COVER
