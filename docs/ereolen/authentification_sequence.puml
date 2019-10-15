@@ -1,0 +1,44 @@
+@startuml
+' plantuml/docs/ereolen/authentification_sequence.puml
+
+title "eReolen Authentification - Sequence Diagram"
+
+actor User
+boundary "eReolen.dk" as GUI
+control "PubHub" as PUBH
+entity BorChk as BORCHK
+control "Adgangsplatform" as ACCPLAT
+
+
+== Old style ==
+
+User -> GUI : Login + Borrow
+GUI -> PUBH : CPR, pin, PID
+PUBH -> BORCHK: CPR + pin
+PUBH <-- BORCHK: OK + kmd
+GUI <-- PUBH : Data
+
+== Adgangsplatform ==
+
+User -> GUI : Login + Borrow
+GUI -> ACCPLAT : Agency
+GUI <-- ACCPLAT : Token, GUID, kmd
+
+GUI -> PUBH : Token, GUID, PID, kmn
+
+PUBH --> ACCPLAT : Token
+
+
+alt Token valid
+    PUBH <-- ACCPLAT : OK
+    alt Quotas accepted
+        GUI <--- PUBH : Data
+    else Quota exceeded
+        GUI <--- PUBH : Message: Quota exceeded
+    end
+else Rejected
+    PUBH <-- ACCPLAT : Fail
+    GUI <--- PUBH : Error
+end
+
+@enduml
