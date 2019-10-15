@@ -1,0 +1,54 @@
+@startuml
+
+title Niveau 2 - Adgangsplatform - Component Diagram
+
+[Bibliotek.dk]
+interface [Auth.dbc.dk] as AUTH2
+
+node Adgangsplatform as ADGANG {
+    interface login.bib.dk as LOGIN
+    interface oauth.login.bib.dk as       oauthLOGIN
+    interface CULR
+    database CULRdb  [
+        CULR database
+        ===
+        
+        GUID, CPR, UserId, Kommunekode
+        
+    ]
+    component "Borrower check" as BORCHK
+}
+
+node FBS {
+    component FBSadmin as FBSA
+    component "FBS Brugerlogin" as FBSU
+}
+
+node FFU {
+    component "FFU Brugerlogin" as FFUU
+}
+
+node NETS {
+    interface "NETS autentiker bruger" as NETSUA
+    component "NemID" as NEMID
+}
+
+node "Service platform" as SERPLAT {
+}
+
+[Bibliotek.dk] <-d-- oauthLOGIN
+[Bibliotek.dk] <-d-- LOGIN
+LOGIN -down--> FBSU
+FBSU <.. SERPLAT: Hent bopælskommune
+LOGIN --> BORCHK
+BORCHK -down--> FBSU
+BORCHK --down-> FFUU
+
+LOGIN --> CULR
+CULR --> CULRdb
+
+FBSA .up..> CULRdb: CPR, userId, Kmd
+
+LOGIN -down--> NETS : Autentificer bruger via NemID
+
+@enduml
