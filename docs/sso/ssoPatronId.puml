@@ -1,0 +1,22 @@
+@startuml
+
+title "Single Sign-on w patronId - Sequence Diagram"
+
+actor Patron
+boundary "CMS/App" as Client
+control "FBS" as FBS
+'entity Widget
+'database Widgets
+
+== Login ==
+Patron -> AP: CPR, Pin
+Client <-- AP: GUID, patronId, Kmd
+
+== Get Status ==
+Client -> FBS: Get status: patronId
+Client <-- FBS: Loans, Reservations, Fees, Bookings
+== Order ==
+Client -> FBS: Order: patronId, PID
+Client <-- FBS: ReservationId, OrderId
+
+@enduml
