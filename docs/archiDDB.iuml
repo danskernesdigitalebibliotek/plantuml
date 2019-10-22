@@ -1,0 +1,272 @@
+' Include elements from DDB Archi project
+'
+' !include https://danskernesdigitalebibliotek.github.io/plantuml/archiDDB.iuml
+
+sprite $bProcess jar:archimate/business-process
+sprite $aService jar:archimate/application-service
+sprite $aComponent jar:archimate/application-component
+
+archimate #BUSINESS       "Business Collaboration"                                     as BusinessCollaboration_BCL                          <<business-collaboration>>
+archimate #BUSINESS       "Arrangement - Se arrangement på Kultunaut (Bruger)"         as ArrangementSeArrangementPoeKultunautBruger_BP      <<business-process>>
+archimate #BUSINESS       "Arrangementer (se og tilmeld)"                              as ArrangementerseOgTilmeld_BP                        <<business-process>>
+archimate #BUSINESS       "Bestil billet til arrangement på Place2book.com"            as BestilBilletTilArrangementPoePlace2bookcom_BP      <<business-process>>
+'archimate #BUSINESS       "Bestil billet til arrangement på Place2book.com (copy)"     as BestilBilletTilArrangementPoePlace2bookcomcopy_BP  <<business-process>>
+archimate #BUSINESS       "Betal mellemværender"                                       as BetalMellemvaerender_BP                            <<business-process>>
+archimate #BUSINESS       "Business Process"                                           as BusinessProcess_BP                                 <<business-process>>
+archimate #BUSINESS       "Del arrangement med Kultunaut"                              as DelArrangementMedKultunaut_BP                      <<business-process>>
+archimate #BUSINESS       "Del arrangement med Place2book.com"                         as DelArrangementMedPlace2bookcom_BP                  <<business-process>>
+archimate #BUSINESS       "Del karrusel med APP"                                       as DelKarruselMedAPP_BP                               <<business-process>>
+archimate #BUSINESS       "Del nyhed med APP"                                          as DelNyhedMedAPP_BP                                  <<business-process>>
+archimate #BUSINESS       "Del nyhed med CMS Content servicen WS"                      as DelNyhedMedCMSContentServicenWS_BP                 <<business-process>>
+archimate #BUSINESS       "Del åbningstider med APP"                                   as DeloebningstiderMedAPP_BP                          <<business-process>>
+archimate #BUSINESS       "Filtrerér søgeresultat"                                     as FiltrererSoegeresultat_BP                          <<business-process>>
+archimate #BUSINESS       "Forny lån"                                                  as FornyLoen_BP                                       <<business-process>>
+archimate #BUSINESS       "Få hjælp til søgning med autocomplete"                      as FoeHjaelpTilSoegningMedAutocomplete_BP             <<business-process>>
+archimate #BUSINESS       "Få vist materiale fra Bibliotek.dk"                         as FoeVistMaterialeFraBibliotekdk_BP                  <<business-process>>
+archimate #BUSINESS       "Føj materiale til liste"                                    as FoejMaterialeTilListe_BP                           <<business-process>>
+archimate #BUSINESS       "Føj søgning til liste"                                      as FoejSoegningTilListe_BP                            <<business-process>>
+archimate #BUSINESS       "Giv tilsagn til at gemme lån"                               as GivTilsagnTilAtGemmeLoen_BP                        <<business-process>>
+archimate #BUSINESS       "Hent nyhed fra BPI"                                         as HentNyhedFraBPI_BP                                 <<business-process>>
+archimate #BUSINESS       "Log ind (Adgangsplatformen)"                                as LogIndAdgangsplatformen_BP                         <<business-process>>
+archimate #BUSINESS       "Log ind (FBS)"                                              as LogIndFBS_BP                                       <<business-process>>
+archimate #BUSINESS       "Læs ebog (Link: eReolen.dk)"                                as LaesEbogLinkEReolendk_BP                           <<business-process>>
+archimate #BUSINESS       "Læs fuldtekstartikel (Docbook)"                             as LaesFuldtekstartikelDocbook_BP                     <<business-process>>
+archimate #BUSINESS       "Læs fuldtekstartikel fra Infomedia"                         as LaesFuldtekstartikelFraInfomedia_BP                <<business-process>>
+archimate #BUSINESS       "Læs relationer (Om forfatteren, anmeldelser etc.)"          as LaesRelationerOmForfatterenAnmeldelserEtc_BP       <<business-process>>
+archimate #BUSINESS       "Opret arrangement"                                          as OpretArrangement_BP                                <<business-process>>
+archimate #BUSINESS       "Opret bruger med NemID"                                     as OpretBrugerMedNemID_BP                             <<business-process>>
+                                                                                                                                                                 
+archimate #BUSINESS       "Opret karrusel med Databrønd materialer"                    as OpretKarruselMedDatabroendMaterialer_BP            <<business-process>>
+archimate #BUSINESS       "Opret karrusel med nyheder med materialer"                  as OpretKarruselMedNyhederMedMaterialer_BP            <<business-process>>
+archimate #BUSINESS       "Opret liste"                                                as OpretListe_BP                                      <<business-process>>
+archimate #BUSINESS       "Opret nyhed med Databrønd materiale"                        as OpretNyhedMedDatabroendMateriale_BP                <<business-process>>
+archimate #BUSINESS       "Opret åbningstider for biblioteker"                         as OpretoebningstiderForBiblioteker_BP                <<business-process>>
+archimate #BUSINESS       "Push notifikationer"                                        as PushNotifikationer_BP                              <<business-process>>
+archimate #BUSINESS       "Rediger liste"                                              as RedigerListe_BP                                    <<business-process>>
+archimate #BUSINESS       "Reservér materiale"                                         as ReserverMateriale_BP                               <<business-process>>
+                                                                                                                                                                 
+archimate #BUSINESS       "Ret brugerprofil"                                           as RetBrugerprofil_BP                                 <<business-process>>
+archimate #BUSINESS       "Se arrangement"                                             as SeArrangement_BP                                   <<business-process>>
+archimate #BUSINESS       "Se basisinformation (vejviser.mv)"                          as SeBasisinformationvejvisermv_BP                    <<business-process>>
+archimate #BUSINESS       "Se brugerprofil"                                            as SeBrugerprofil_BP                                  <<business-process>>
+archimate #BUSINESS       "Se karrusel med Databrønd materiale"                        as SeKarruselMedDatabroendMateriale_BP                <<business-process>>
+archimate #BUSINESS       "Se karrusel med nyheder med materialer"                     as SeKarruselMedNyhederMedMaterialer_BP               <<business-process>>
+archimate #BUSINESS       "Se lån"                                                     as SeLoen_BP                                          <<business-process>>
+archimate #BUSINESS       "Se materialers tilgængelighed"                              as SeMaterialersTilgaengelighed_BP                    <<business-process>>
+                                                                                                                                                                 
+archimate #BUSINESS       "Se materialets beholdning"                                  as SeMaterialetsBeholdning_BP                         <<business-process>>
+                                                                                                                                                                 
+archimate #BUSINESS       "Se materialets opstilling"                                  as SeMaterialetsOpstilling_BP                         <<business-process>>
+archimate #BUSINESS       "Se mellemværender"                                          as SeMellemvaerender_BP                               <<business-process>>
+archimate #BUSINESS       "Se nyhed med Databrønd materiale"                           as SeNyhedMedDatabroendMateriale_BP                   <<business-process>>
+archimate #BUSINESS       "Se online (Proxy / URI)"                                    as SeOnlineProxyURI_BP                                <<business-process>>
+archimate #BUSINESS       "Se oplysninger i brugerprofil"                              as SeOplysningerIBrugerprofil_BP                      <<business-process>>
+archimate #BUSINESS       "Se personaliserede forslag til materialer"                  as SePersonaliseredeForslagTilMaterialer_BP           <<business-process>>
+                                                                                                                                                                 
+archimate #BUSINESS       "Se reserveringer"                                           as SeReserveringer_BP                                 <<business-process>>
+archimate #BUSINESS       "Se søgeresultatet"                                          as SeSoegeresultatet_BP                               <<business-process>>
+archimate #BUSINESS       "Se tidsskrifters årgange og numre"                          as SeTidsskriftersoergangeOgNumre_BP                  <<business-process>>
+archimate #BUSINESS       "Se åbningstider"                                            as Seoebningstider_BP                                 <<business-process>>
+archimate #BUSINESS       "Send nyhed til BPI via BPI WS"                              as SendNyhedTilBPIViaBPIWS_BP                         <<business-process>>
+archimate #BUSINESS       "Slet reservering"                                           as SletReservering_BP                                 <<business-process>>
+archimate #BUSINESS       "Slet reservering(er)"                                       as SletReserveringer_BP                               <<business-process>>
+archimate #BUSINESS       "Sortér søgeresultat"                                        as SorterSoegeresultat_BP                             <<business-process>>
+archimate #BUSINESS       "Stil spørgsmål til Biblioteksvagten"                        as StilSpoergsmoelTilBiblioteksvagten_BP              <<business-process>>
+                                                                                                                                                                 
+archimate #BUSINESS       "Sæt interessedato for reservering(er)"                      as SaetInteressedatoForReserveringer_BP               <<business-process>>
+archimate #BUSINESS       "Søg materiale"                                              as SoegMateriale_BP                                   <<business-process>>
+                                                                                                                                                                 
+                                                                                                                                                                 
+archimate #BUSINESS       "Søg materiale via Universal Search"                         as SoegMaterialeViaUniversalSearch_BP                 <<business-process>>
+archimate #APPLICATION    "Adgangsplatformen"                                          as Adgangsplatformen_ACL                              <<application-collaboration>>
+archimate #APPLICATION    "Application Collaboration"                                  as ApplicationCollaboration_ACL                       <<application-collaboration>>
+                                                                                                                                                                          
+archimate #APPLICATION    "Databrønd"                                                  as Databroend_ACL                                     <<application-collaboration>>
+                                                                                                                                                                          
+archimate #APPLICATION    "FBS"                                                        as FBS_ACL                                            <<application-collaboration>>
+                                                                                                                                                                          
+                                                                                                                                                                          
+archimate #APPLICATION    "Open Platform"                                              as OpenPlatform_ACL                                   <<application-collaboration>>
+archimate #APPLICATION    "Redia APP Platform"                                         as RediaAPPPlatform_ACL                               <<application-collaboration>>
+archimate #APPLICATION    "Application Component"                                      as ApplicationComponent_ACO                           <<application-component>>
+                                                                                                                                                                      
+archimate #APPLICATION    "Artesis (Professions-højskolerne)"                          as ArtesisProfessionshoejskolerne_ACO                 <<application-component>>
+archimate #APPLICATION    "AWS"                                                        as AWS_ACO                                            <<application-component>>
+archimate #APPLICATION    "Bibliotek.dk"                                               as Bibliotekdk_ACO                                    <<application-component>>
+archimate #APPLICATION    "Biblioteket App"                                            as BiblioteketApp_ACO                                 <<application-component>>
+archimate #APPLICATION    "Biblioteksvagten"                                           as Biblioteksvagten_ACO                               <<application-component>>
+                                                                                                                                                                      
+archimate #APPLICATION    "Biblo.dk"                                                   as Biblodk_ACO                                        <<application-component>>
+                                                                                                                                                                      
+archimate #APPLICATION    "Bibzoom"                                                    as Bibzoom_ACO                                        <<application-component>>
+archimate #APPLICATION    "BOB"                                                        as BOB_ACO                                            <<application-component>>
+archimate #APPLICATION    "BOB database"                                               as BOBDatabase_ACO                                    <<application-component>>
+archimate #APPLICATION    "Borger.dk"                                                  as Borgerdk_ACO                                       <<application-component>>
+archimate #APPLICATION    "CMS Content"                                                as CMSContent_ACO                                     <<application-component>>
+archimate #APPLICATION    "Cordura skærmløsning"                                       as CorduraSkaermloesning_ACO                          <<application-component>>
+archimate #APPLICATION    "CULR_SAOU Admin"                                            as CULR_SAOUAdmin_ACO                                 <<application-component>>
+archimate #APPLICATION    "Data I/O"                                                   as DataIO_ACO                                         <<application-component>>
+archimate #APPLICATION    "Data I/O Admin"                                             as DataIOAdmin_ACO                                    <<application-component>>
+archimate #APPLICATION    "DDB CMS"                                                    as DDBCMS_ACO                                         <<application-component>>
+                                                                                                                                                                      
+archimate #APPLICATION    "eMusik"                                                     as EMusik_ACO                                         <<application-component>>
+archimate #APPLICATION    "eReolen"                                                    as EReolen_ACO                                        <<application-component>>
+archimate #APPLICATION    "eReolen APP"                                                as EReolenAPP_ACO                                     <<application-component>>
+archimate #APPLICATION    "eReolen Global"                                             as EReolenGlobal_ACO                                  <<application-component>>
+archimate #APPLICATION    "eReolen GO"                                                 as EReolenGO_ACO                                      <<application-component>>
+archimate #APPLICATION    "ERMS"                                                       as ERMS_ACO                                           <<application-component>>
+archimate #APPLICATION    "Faktalink"                                                  as Faktalink_ACO                                      <<application-component>>
+archimate #APPLICATION    "Faktor"                                                     as Faktor_ACO                                         <<application-component>>
+archimate #APPLICATION    "FBS Admin"                                                  as FBSAdmin_ACO                                       <<application-component>>
+archimate #APPLICATION    "FBS Skoleportal"                                            as FBSSkoleportal_ACO                                 <<application-component>>
+archimate #APPLICATION    "FFU"                                                        as FFU_ACO                                            <<application-component>>
+archimate #APPLICATION    "FFU CMS"                                                    as FFUCMS_ACO                                         <<application-component>>
+archimate #APPLICATION    "FFU ILS"                                                    as FFUILS_ACO                                         <<application-component>>
+archimate #APPLICATION    "FFU Portaler"                                               as FFUPortaler_ACO                                    <<application-component>>
+archimate #APPLICATION    "Filmcentralen"                                              as Filmcentralen_ACO                                  <<application-component>>
+archimate #APPLICATION    "Filmstriben"                                                as Filmstriben_ACO                                    <<application-component>>
+archimate #APPLICATION    "Finurlige fakta"                                            as FinurligeFakta_ACO                                 <<application-component>>
+archimate #APPLICATION    "Firebase"                                                   as Firebase_ACO                                       <<application-component>>
+archimate #APPLICATION    "Forfatterweb"                                               as Forfatterweb_ACO                                   <<application-component>>
+archimate #APPLICATION    "Infomedia"                                                  as Infomedia_ACO                                      <<application-component>>
+archimate #APPLICATION    "Kultunaut.dk"                                               as Kultunautdk_ACO                                    <<application-component>>
+archimate #APPLICATION    "Library Platform (SORT BOX)"                                as LibraryPlatformSORTBOX_ACO                         <<application-component>>
+archimate #APPLICATION    "Litteratursiden"                                            as Litteratursiden_ACO                                <<application-component>>
+archimate #APPLICATION    "Login.bib.dk"                                               as Loginbibdk_ACO                                     <<application-component>>
+archimate #APPLICATION    "Materialevalgs-sytem"                                       as Materialevalgssytem_ACO                            <<application-component>>
+archimate #APPLICATION    "Misc. E-ressourcer"                                         as MiscEressourcer_ACO                                <<application-component>>
+archimate #APPLICATION    "MobilePay"                                                  as MobilePay_ACO                                      <<application-component>>
+archimate #APPLICATION    "Netpunkt"                                                   as Netpunkt_ACO                                       <<application-component>>
+archimate #APPLICATION    "Nets"                                                       as Nets_ACO                                           <<application-component>>
+archimate #APPLICATION    "Nota"                                                       as Nota_ACO                                           <<application-component>>
+archimate #APPLICATION    "Oauth2 (oauth.login.bib.dk)"                                as Oauth2oauthloginbibdk_ACO                          <<application-component>>
+archimate #APPLICATION    "Oauth2 autorisation"                                        as Oauth2Autorisation_ACO                             <<application-component>>
+archimate #APPLICATION    "Open Agency (VIP)"                                          as OpenAgencyVIP_ACO                                  <<application-component>>
+                                                                                                                                                                      
+archimate #APPLICATION    "Open Cataloguing"                                           as OpenCataloguing_ACO                                <<application-component>>
+archimate #APPLICATION    "Open source DBC"                                            as OpenSourceDBC_ACO                                  <<application-component>>
+archimate #APPLICATION    "Place2book.com"                                             as Place2bookcom_ACO                                  <<application-component>>
+archimate #APPLICATION    "Quiz.dbc.dk"                                                as Quizdbcdk_ACO                                      <<application-component>>
+                                                                                                                                                                      
+archimate #APPLICATION    "RB Digital"                                                 as RBDigital_ACO                                      <<application-component>>
+archimate #APPLICATION    "Redia Database"                                             as RediaDatabase_ACO                                  <<application-component>>
+archimate #APPLICATION    "Redia Hubber"                                               as RediaHubber_ACO                                    <<application-component>>
+archimate #APPLICATION    "SAOU"                                                       as SAOU_ACO                                           <<application-component>>
+archimate #APPLICATION    "Serendiptets motor (Personalisering)"                       as SerendiptetsMotorPersonalisering_ACO               <<application-component>>
+archimate #APPLICATION    "Smaug (Resource owner)"                                     as SmaugResourceOwner_ACO                             <<application-component>>
+archimate #APPLICATION    "Worldcat"                                                   as Worldcat_ACO                                       <<application-component>>
+archimate #APPLICATION    "Application Function"                                       as ApplicationFunction_AF                             <<application-function>>
+archimate #APPLICATION    "Authentiker bruger"                                         as AuthentikerBruger_AF                               <<application-function>>
+archimate #APPLICATION    "Authentiker Login"                                          as AuthentikerLogin_AF                                <<application-function>>
+archimate #APPLICATION    "Del åbningstider med APP"                                   as DeloebningstiderMedAPP_AF                          <<application-function>>
+archimate #APPLICATION    "Ding Redia RSS events"                                      as DingRediaRSSEvents_AF                              <<application-function>>
+archimate #APPLICATION    "Ding Redia RSS news"                                        as DingRediaRSSNews_AF                                <<application-function>>
+archimate #APPLICATION    "Ding Redia RSS variables"                                   as DingRediaRSSVariables_AF                           <<application-function>>
+archimate #APPLICATION    "FBS Catalog getAvailability"                                as FBSCatalogGetAvailability_AF                       <<application-function>>
+archimate #APPLICATION    "FBS Catalog getHoldings"                                    as FBSCatalogGetHoldings_AF                           <<application-function>>
+archimate #APPLICATION    "FBS Client authenticate"                                    as FBSClientAuthenticate_AF                           <<application-function>>
+archimate #APPLICATION    "FBS Patron authenticate"                                    as FBSPatronAuthenticate_AF                           <<application-function>>
+archimate #APPLICATION    "FBS Patron getFees"                                         as FBSPatronGetFees_AF                                <<application-function>>
+archimate #APPLICATION    "FBS Patron getLoans"                                        as FBSPatronGetLoans_AF                               <<application-function>>
+archimate #APPLICATION    "FBS Patron getReservations"                                 as FBSPatronGetReservations_AF                        <<application-function>>
+archimate #APPLICATION    "FBS Patron postReservationAdd"                              as FBSPatronPostReservationAdd_AF                     <<application-function>>
+archimate #APPLICATION    "FBS Patron preAuthenticated"                                as FBSPatronPreAuthenticated_AF                       <<application-function>>
+archimate #APPLICATION    "FBS: Patron authenticate"                                   as FBSPatronAuthenticate_AF                           <<application-function>>
+archimate #APPLICATION    "FBS: Patrons postReservationsAdd"                           as FBSPatronsPostReservationsAdd_AF                   <<application-function>>
+archimate #APPLICATION    "Filtrering af låneattributter"                              as FiltreringAfLoeneattributter_AF                    <<application-function>>
+archimate #APPLICATION    "Gem liste"                                                  as GemListe_AF                                        <<application-function>>
+archimate #APPLICATION    "Hent brugerprofil"                                          as HentBrugerprofil_AF                                <<application-function>>
+                                                                                                                                                                     
+archimate #APPLICATION    "Hent forsider"                                              as HentForsider_AF                                    <<application-function>>
+archimate #APPLICATION    "Hent kommunekode"                                           as HentKommunekode_AF                                 <<application-function>>
+archimate #APPLICATION    "Hent liste"                                                 as HentListe_AF                                       <<application-function>>
+archimate #APPLICATION    "Hent nyhed"                                                 as HentNyhed_AF                                       <<application-function>>
+archimate #APPLICATION    "Hent søgeforslag"                                           as HentSoegeforslag_AF                                <<application-function>>
+archimate #APPLICATION    "Hent søgeresultat"                                          as HentSoegeresultat_AF                               <<application-function>>
+archimate #APPLICATION    "Opdater"                                                    as Opdater_AF                                         <<application-function>>
+archimate #APPLICATION    "Opdater bibliografisk record"                               as OpdaterBibliografiskRecord_AF                      <<application-function>>
+archimate #APPLICATION    "Opret bibliografisk record"                                 as OpretBibliografiskRecord_AF                        <<application-function>>
+archimate #APPLICATION    "Slå bruger op og hent kommuneid, biblioteksnumrer"          as SloeBrugerOpOgHentKommuneidBiblioteksnumrer_AF     <<application-function>>
+archimate #APPLICATION    "Søg efter søge ord"                                         as SoegEfterSoegeOrd_AF                               <<application-function>>
+archimate #APPLICATION    "Tjek bruger rettigheder"                                    as TjekBrugerRettigheder_AF                           <<application-function>>
+archimate #APPLICATION    "tjek om bibliotekslicens og brugers bopæl"                  as TjekOmBibliotekslicensOgBrugersBopael_AF           <<application-function>>
+archimate #APPLICATION    "Application Process"                                        as ApplicationProcess_AP                              <<application-process>>
+archimate #APPLICATION    "Application Service"                                        as ApplicationService_AS                              <<application-service>>
+archimate #APPLICATION    "Auth.dbc.dk"                                                as Authdbcdk_AS                                       <<application-service>>
+archimate #APPLICATION    "Borrower check"                                             as BorrowerCheck_AS                                   <<application-service>>
+archimate #APPLICATION    "BPI"                                                        as BPI_AS                                             <<application-service>>
+archimate #APPLICATION    "Brugerspor"                                                 as Brugerspor_AS                                      <<application-service>>
+archimate #APPLICATION    "CMS Content service"                                        as CMSContentService_AS                               <<application-service>>
+                                                                                                                                                                    
+archimate #APPLICATION    "Cover service"                                              as CoverService_AS                                    <<application-service>>
+archimate #APPLICATION    "CULR"                                                       as CULR_AS                                            <<application-service>>
+archimate #APPLICATION    "Emneord service"                                            as EmneordService_AS                                  <<application-service>>
+archimate #APPLICATION    "FBS Sync"                                                   as FBSSync_AS                                         <<application-service>>
+                                                                                                                                                                    
+archimate #APPLICATION    "FFU"                                                        as FFU_AS                                             <<application-service>>
+archimate #APPLICATION    "Infomedia"                                                  as Infomedia_AS                                       <<application-service>>
+archimate #APPLICATION    "Linkresolver"                                               as Linkresolver_AS                                    <<application-service>>
+archimate #APPLICATION    "Linkresolver (SFX)"                                         as LinkresolverSFX_AS                                 <<application-service>>
+archimate #APPLICATION    "Moreinfo"                                                   as Moreinfo_AS                                        <<application-service>>
+                                                                                                                                                                    
+archimate #APPLICATION    "NAL"                                                        as NAL_AS                                             <<application-service>>
+archimate #APPLICATION    "NAR"                                                        as NAR_AS                                             <<application-service>>
+archimate #APPLICATION    "NETS"                                                       as NETS_AS                                            <<application-service>>
+archimate #APPLICATION    "OAI-høst"                                                   as OAIhoest_AS                                        <<application-service>>
+archimate #APPLICATION    "Open ADHL"                                                  as OpenADHL_AS                                        <<application-service>>
+archimate #APPLICATION    "Open agency (VIP)"                                          as OpenAgencyVIP_AS                                   <<application-service>>
+                                                                                                                                                                    
+archimate #APPLICATION    "Open Archive Interface"                                     as OpenArchiveInterface_AS                            <<application-service>>
+archimate #APPLICATION    "Open cataloguing build"                                     as OpenCataloguingBuild_AS                            <<application-service>>
+archimate #APPLICATION    "Open cataloguing service"                                   as OpenCataloguingService_AS                          <<application-service>>
+archimate #APPLICATION    "Open cataloguing update"                                    as OpenCataloguingUpdate_AS                           <<application-service>>
+archimate #APPLICATION    "Open cataloguing validate"                                  as OpenCataloguingValidate_AS                         <<application-service>>
+archimate #APPLICATION    "Open find order"                                            as OpenFindOrder_AS                                   <<application-service>>
+archimate #APPLICATION    "Open format"                                                as OpenFormat_AS                                      <<application-service>>
+archimate #APPLICATION    "Open holding status"                                        as OpenHoldingStatus_AS                               <<application-service>>
+                                                                                                                                                                    
+archimate #APPLICATION    "Open list"                                                  as OpenList_AS                                        <<application-service>>
+archimate #APPLICATION    "Open order"                                                 as OpenOrder_AS                                       <<application-service>>
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+archimate #APPLICATION    "Open platform CMS"                                          as OpenPlatformCMS_AS                                 <<application-service>>
+archimate #APPLICATION    "Open platform Community"                                    as OpenPlatformCommunity_AS                           <<application-service>>
+                                                                                                                                                                    
+archimate #APPLICATION    "Open platform Libraries"                                    as OpenPlatformLibraries_AS                           <<application-service>>
+                                                                                                                                                                    
+archimate #APPLICATION    "Open platform Order"                                        as OpenPlatformOrder_AS                               <<application-service>>
+                                                                                                                                                                    
+archimate #APPLICATION    "Open platform Recommend"                                    as OpenPlatformRecommend_AS                           <<application-service>>
+                                                                                                                                                                    
+                                                                                                                                                                    
+archimate #APPLICATION    "Open platform Search"                                       as OpenPlatformSearch_AS                              <<application-service>>
+archimate #APPLICATION    "Open platform Status"                                       as OpenPlatformStatus_AS                              <<application-service>>
+                                                                                                                                                                    
+archimate #APPLICATION    "Open platform Suggest"                                      as OpenPlatformSuggest_AS                             <<application-service>>
+                                                                                                                                                                    
+archimate #APPLICATION    "Open price check"                                           as OpenPriceCheck_AS                                  <<application-service>>
+archimate #APPLICATION    "Open question"                                              as OpenQuestion_AS                                    <<application-service>>
+archimate #APPLICATION    "Open search"                                                as OpenSearch_AS                                      <<application-service>>
+                                                                                                                                                                    
+archimate #APPLICATION    "Open spell"                                                 as OpenSpell_AS                                       <<application-service>>
+archimate #APPLICATION    "Open suggestion"                                            as OpenSuggestion_AS                                  <<application-service>>
+archimate #APPLICATION    "Open user status"                                           as OpenUserStatus_AS                                  <<application-service>>
+archimate #APPLICATION    "Open X-ID"                                                  as OpenXID_AS                                         <<application-service>>
+archimate #APPLICATION    "Ortograf"                                                   as Ortograf_AS                                        <<application-service>>
+archimate #APPLICATION    "Place2book"                                                 as Place2book_AS                                      <<application-service>>
+archimate #APPLICATION    "Proxy"                                                      as Proxy_AS                                           <<application-service>>
+archimate #APPLICATION    "Pubhub Library"                                             as PubhubLibrary_AS                                   <<application-service>>
+archimate #APPLICATION    "Rank"                                                       as Rank_AS                                            <<application-service>>
+archimate #APPLICATION    "Redia hubber"                                               as RediaHubber_AS                                     <<application-service>>
+archimate #APPLICATION    "SAOU"                                                       as SAOU_AS                                            <<application-service>>
+archimate #APPLICATION    "Service platformen"                                         as ServicePlatformen_AS                               <<application-service>>
+archimate #APPLICATION    "SRU Z39.50"                                                 as SRUZ3950_AS                                        <<application-service>>
+archimate #APPLICATION    "storage"                                                    as Storage_AS                                         <<application-service>>
+                                                                                                                                                                    
+archimate #APPLICATION    "Universal search"                                           as UniversalSearch_AS                                 <<application-service>>
+archimate #APPLICATION    "Update service"                                             as UpdateService_AS                                   <<application-service>>
+archimate #APPLICATION    "VidenDB dataopsamlere"                                      as VidenDBDataopsamlere_AS                            <<application-service>>
+                                                                                                                                                                    
+archimate #APPLICATION    "VoxB"                                                       as VoxB_AS                                            <<application-service>>
+archimate #APPLICATION    "Worldcat sync"                                              as WorldcatSync_AS                                    <<application-service>>
