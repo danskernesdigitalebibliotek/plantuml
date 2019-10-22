@@ -1,0 +1,4 @@
+@startuml
+
+' List all elements from archiDDB
+!include https://danskernesdigitalebibliotek.github.io/plantuml/archiDDB.iuml
