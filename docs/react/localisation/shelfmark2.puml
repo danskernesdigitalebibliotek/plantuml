@@ -90,7 +90,7 @@ endif
 ':$prefix;
 
 if ( exists 100a ) then (yes)
-    :shelfmark = 110a ;
+    :shelfmark = 100a ;
 elseif ( exists 110a ) then (yes)
     :shelfmark = 110a ;
 elseif ( exists 239t) then (yes)
