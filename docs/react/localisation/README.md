@@ -37,9 +37,12 @@ Shelf mark + Material group description | | `Greve Bibliotek > Børn > Bog > Ene
 
 ### Sekvensbeskrivelse af shelfmark
 
+> [Advarsel]
+> Logikken er forældet i shelfmark.txt. Brug shelfmark.puml
+
+<!--
 ![Kombination til shelfmark](http://www.plantuml.com/plantuml/proxy?src=https://danskernesdigitalebibliotek.github.io/plantuml/react/
 localisation/shelfmark.txt)
-
 1. Hvis felt `652` delfelt `m` = `sk`
    1. Hvis felt `100` og felt `110` mangler vises 1. ord (efter evt. soltegn) i `245` delfelt `a`
    1. Hvis felt `100` mangler vises 1. ord (efter evt. soltegn) i `110` delfelt `a`
@@ -51,7 +54,7 @@ Original rækkefølge
   1. Vises 1. ord (efter evt. soltegn) i felt 100 delfelt a
   1. Hvis felt 100 mangler vises 1. ord (efter evt. soltegn) i 110 delfelt a
   1. Hvis felt 100 og felt 110 mangler vises 1. ord (efter evt. soltegn) i 245 delfelt a
--->
+-- >
 
 1. Hvis felt `652` delfelt `m` ikke = `sk` og posten indeholder felt `039`
    1. Vises indholdet i felt `039` delfelterne `a` + `b` (bogstavskoderne oversættes, se herunder) 
@@ -72,7 +75,7 @@ Original rækkefølge
     1. Hvis felt 100 og felt 110 mangler, vises 1. ord (efter evt. soltegn) i 239 delfelt a
     1. Hvis felt 100, felt 110 og felt 239 mangler, vises 1. ord (efter evt. soltegn) i 245 delfelt a
 
--->
+-- >
 
 1. Hvis felt `652` delfelt `m` ikke = `sk` og der ikke er et felt `039`
    1. Hvis delfelt `b` findes, vises indhold af felt `652` delfelt `m` (DK5-koden) + indhold i delfelt `b`
@@ -91,6 +94,7 @@ efterfulgt af (ligesom ovenfor)
 Hvis felt 100 vises 1. ord (efter evt. soltegn) i 100 delfelt a
 Hvis felt 100 mangler, vises 1. ord (efter evt. soltegn) i 110 delfelt a
 Hvis felt 100 og felt 110 mangler, vises 1. ord (efter evt. soltegn) i 245 delfelt a
+-- >
 -->
 
 
