@@ -7,7 +7,6 @@ skinparam monochrome true
 
 ' Participants
 start
-
 /'
         // Look for the marc field to get DK5 classification from. We require
         // that either 'm' or 'o' subfield is present and prefer 652. If this is
