@@ -1,0 +1,114 @@
+@startuml
+title Shelfmark
+
+' Skinparams '
+skinparam monochrome true
+'skinparam handwritten true
+
+' Participants
+start
+
+/'
+        // Look for the marc field to get DK5 classification from. We require
+        // that either 'm' or 'o' subfield is present and prefer 652. If this is
+        // not the case we'll try the outdated marc field 654 for DK5.
+        $field_dk5 = fbs_get_marc_field($entity, '652');
+        if (empty($field_dk5['m']) && empty($field_dk5['o'])) {
+          $field_dk5 = fbs_get_marc_field($entity, '654');
+        }
+
+'/
+':Set empty $prefix
+:field_dk5 = 652;
+if (exists "652 *m || *o" ) then (no)
+    :field_dk5 = 654;
+endif
+
+
+/'
+        // Non-fiction: Look for the 'sk' marker in both 'm' and 'o' subfield.
+        // If it's not present in any of these, we consider the material be to
+        // be non-fiction and we should use the special prefix for non-fiction
+        // materials.
+        if ($field_dk5_m !== 'sk' && $field_dk5_o !== 'sk') {
+'/
+
+'if ( *m !== 'sk' \n&& *o !== 'sk') then (yes : Non-fiction)
+if ( Neither *m nor *o == 'sk') then (yes : Non-fiction = DK5)
+    if (exists *m" ) then (yes)
+        :prefix .= *m;
+    elseif (exists *o ) then (yes)
+        :prefix .= *o;
+    else (no)
+    endif
+    
+/'
+          // Additional descriptors from the DK5 classification. Note that we
+          // ensure to use data from the correct subfields of the field we got
+          // the DK5 classification from.
+          if (!empty($field_dk5['b'][$field_dk5_index])) {
+            $prefix .= ' ' . $field_dk5['b'][$field_dk5_index];
+          }
+          elseif (!empty($field_dk5['a'][$field_dk5_index])) {
+            $prefix .= ' ' . $field_dk5['a'][$field_dk5_index];
+            if (!empty($field_dk5['h'][$field_dk5_index])) {
+              $prefix .= ', ' . $field_dk5['h'][$field_dk5_index];
+            }
+          }
+'/
+    if ( exists *b ) then (yes)
+        :prefix .= " " . *b description;
+    elseif ( exists *a ) then (yes)
+            :prefix .= *a description;
+        if ( exists *h ) then (yes)
+            :prefix .= ', ' . *h description;
+        endif
+    endif
+/'
+        // Music: Field 039.a is present on music materials, so we can use this
+        // is an indicator.
+        elseif ($field039a = fbs_get_marc_field($entity, '039', 'a')) {
+          $prefix .= fbs_translate_marc($field039a, '039.a');
+
+          // We'll also append additional subfields if present.
+          if ($field039b = fbs_get_marc_field($entity, '039', 'b')) {
+            $prefix .= ' ' . fbs_translate_marc($field039b, '039.b');
+          }
+        }
+'/
+
+else (no : Fiction = sk)
+    if ( exists "039a "Music" ) then (yes)
+        :prefix .= " " . Expanded value;
+        if (exists 039b ) then (yes)
+            :prefix .= Expanded value;
+        endif
+    else (no: Prefix = "")
+        note right: Prefix is empty\nand "sk" ignored!
+    endif
+endif
+
+':$prefix;
+
+if ( exists 100a ) then (yes)
+    :shelfmark = 110a ;
+elseif ( exists 110a ) then (yes)
+    :shelfmark = 110a ;
+elseif ( exists 239t) then (yes)
+    :shelfmark = 239t ;
+elseif ( exists 245a ) then (yes)
+    :shelfmark = 245a ;
+else (nothing)
+  :No shelfmark;
+endif
+
+
+':$shefmark = first of [ 100a || 110a || 239t || 245a ];
+if (exists shelfmark ) then (yes)
+    :Alphabetise shelfmark "¤";
+    :Uppercase first on shelfmark;
+endif
+
+:holding = prefix . shelf_mark;
+
+stop
