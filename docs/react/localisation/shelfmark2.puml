@@ -110,3 +110,5 @@ endif
 :holding = prefix . shelf_mark;
 
 stop
+
+@enduml
