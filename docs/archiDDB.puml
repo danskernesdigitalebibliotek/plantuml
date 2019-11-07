@@ -1,4 +1,21 @@
 @startuml
+
+title Dummy include
+
+start
+
+':Eat Hot Wings;
+
+note left
+    This is a simple test of includes on Github
+    Plain and simple: Don't
+end note
+
+':Drink Homebrew;
+
+stop
 ' List all elements from archiDDB
 '!include https://danskernesdigitalebibliotek.github.io/plantuml/archiDDB.iuml
 !include /github/workspace/docs/archiDDB.iuml
+
+@enduml
