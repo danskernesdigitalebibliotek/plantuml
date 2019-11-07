@@ -15,7 +15,6 @@ start
         if (empty($field_dk5['m']) && empty($field_dk5['o'])) {
           $field_dk5 = fbs_get_marc_field($entity, '654');
         }
-
 '/
 ':Set empty $prefix
 :field_dk5 = 652;
@@ -87,7 +86,7 @@ else (no : Fiction = sk)
     endif
 endif
 
-':$prefix;
+:prefix done. Builing shelfmark;
 
 if ( exists 100a ) then (yes)
     :shelfmark = 100a ;
