@@ -103,7 +103,7 @@ endif
 
 ':$shefmark = first of [ 100a || 110a || 239t || 245a ];
 if (exists shelfmark ) then (yes)
-    :Alphabetise shelfmark "¤";
+    :Alphabetise shelfmark "<U+00A4>";
     :Uppercase first on shelfmark;
 endif
 
