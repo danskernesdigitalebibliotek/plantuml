@@ -58,7 +58,7 @@ if ( Neither *m nor *o == 'sk') then (yes : Non-fiction = DK5)
     elseif ( exists *a ) then (yes)
             :prefix .= *a description;
         if ( exists *h ) then (yes)
-            :prefix .= ', ' . *h description;
+            :prefix .= ", " . *h description;
         endif
     endif
 /'
