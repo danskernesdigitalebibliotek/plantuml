@@ -32,13 +32,14 @@ endif
 '/
 
 'if ( *m !== 'sk' \n&& *o !== 'sk') then (yes : Non-fiction)
-if ( Neither *m nor *o == 'sk') then (yes : Non-fiction = DK5)
+if ( Neither *m nor *o == "sk") then (yes : Non-fiction = DK5)
     if (exists *m" ) then (yes)
         :prefix .= *m;
     elseif (exists *o ) then (yes)
         :prefix .= *o;
     else (no)
     endif
+    
 /'
           // Additional descriptors from the DK5 classification. Note that we
           // ensure to use data from the correct subfields of the field we got
@@ -74,7 +75,40 @@ if ( Neither *m nor *o == 'sk') then (yes : Non-fiction = DK5)
         }
 '/
 
+else (no : Fiction = sk)
+    if ( exists "039a "Music" ) then (yes)
+        :prefix .= " " . Expanded value;
+        if (exists 039b ) then (yes)
+            :prefix .= Expanded value;
+        endif
+    else (no: Prefix = "")
+        note right: Prefix is empty\nand "sk" ignored!
+    endif
 endif
 
+:prefix done. Builing shelfmark;
+
+if ( exists 100a ) then (yes)
+    :shelfmark = 100a ;
+elseif ( exists 110a ) then (yes)
+    :shelfmark = 110a ;
+elseif ( exists 239t) then (yes)
+    :shelfmark = 239t ;
+elseif ( exists 245a ) then (yes)
+    :shelfmark = 245a ;
+else (nothing)
+  :No shelfmark;
+endif
+
+
+':$shefmark = first of [ 100a || 110a || 239t || 245a ];
+if (exists shelfmark ) then (yes)
+    :Alphabetise shelfmark "¤";
+    :Uppercase first on shelfmark;
+endif
+
+:holding = prefix . shelf_mark;
+
 stop
+
 @enduml
