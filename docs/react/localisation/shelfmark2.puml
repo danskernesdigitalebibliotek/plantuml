@@ -39,6 +39,40 @@ if ( Neither *m nor *o == 'sk') then (yes : Non-fiction = DK5)
         :prefix .= *o;
     else (no)
     endif
+/'
+          // Additional descriptors from the DK5 classification. Note that we
+          // ensure to use data from the correct subfields of the field we got
+          // the DK5 classification from.
+          if (!empty($field_dk5['b'][$field_dk5_index])) {
+            $prefix .= ' ' . $field_dk5['b'][$field_dk5_index];
+          }
+          elseif (!empty($field_dk5['a'][$field_dk5_index])) {
+            $prefix .= ' ' . $field_dk5['a'][$field_dk5_index];
+            if (!empty($field_dk5['h'][$field_dk5_index])) {
+              $prefix .= ', ' . $field_dk5['h'][$field_dk5_index];
+            }
+          }
+'/
+    if ( exists *b ) then (yes)
+        :prefix .= " " . *b description;
+    elseif ( exists *a ) then (yes)
+            :prefix .= *a description;
+        if ( exists *h ) then (yes)
+            :prefix .= ', ' . *h description;
+        endif
+    endif
+/'
+        // Music: Field 039.a is present on music materials, so we can use this
+        // is an indicator.
+        elseif ($field039a = fbs_get_marc_field($entity, '039', 'a')) {
+          $prefix .= fbs_translate_marc($field039a, '039.a');
+
+          // We'll also append additional subfields if present.
+          if ($field039b = fbs_get_marc_field($entity, '039', 'b')) {
+            $prefix .= ' ' . fbs_translate_marc($field039b, '039.b');
+          }
+        }
+'/
 
 endif
 
