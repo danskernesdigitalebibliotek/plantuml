@@ -23,6 +23,24 @@ if (exists "652 *m || *o" ) then (no)
 endif
 
 
+/'
+        // Non-fiction: Look for the 'sk' marker in both 'm' and 'o' subfield.
+        // If it's not present in any of these, we consider the material be to
+        // be non-fiction and we should use the special prefix for non-fiction
+        // materials.
+        if ($field_dk5_m !== 'sk' && $field_dk5_o !== 'sk') {
+'/
+
+'if ( *m !== 'sk' \n&& *o !== 'sk') then (yes : Non-fiction)
+if ( Neither *m nor *o == 'sk') then (yes : Non-fiction = DK5)
+    if (exists *m" ) then (yes)
+        :prefix .= *m;
+    elseif (exists *o ) then (yes)
+        :prefix .= *o;
+    else (no)
+    endif
+
+endif
 
 stop
 @enduml
