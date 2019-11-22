@@ -8,7 +8,15 @@ Til: Erik Bachmann Pedersen <@slks.dk>
 Emne: SV: Openplatform - shelfmark
 -->
 
-Koden ligger under https://github.com/ding2/ding2/blob/master/modules/fbs/includes/fbs.availability.inc
+Koden ligger under https://github.com/ding2/ding2/blob/master/modules/fbs/includes/fbs.availability.inc#L37 (Se `function fbs_availability_holdings($provider_ids)`)
+
+<fileset>
+<legend>BEMÆRK</legend>
+ 
+Der er en diskrepans over til https://github.com/ding2/ding2/blob/master/modules/opensearch/src/OpenSearchTingObject.php#L516
+hvor fiktion inkluderer "sk" samt grupperne 82* - 88*
+
+</fileset>
 
 Vi har følgende liggende i ”DDB CMS Manual – Konfiguration”
 
