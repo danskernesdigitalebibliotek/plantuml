@@ -11,31 +11,25 @@ Name	| Latest commit message
 
 Suggestions for new structure:
 
-* as
-  * as
-* as
-  * as
-    * as
-
 - Github
--- plantuml-public
---- openplatform
----- shelfmark
----- holdings
---- infrastructure
--- Plantuml-private
---- ddb-services
----- follow-searches
----- loan-history
----- material-cover
----- material-list
----- subscription
---- ddb-user-interfaces
----- ddb-cms
------ gantt
------ red-routes
------ use-cases
------ interactions
----- biblioteket-app
----- ereolen
----- litteratursiden
+  - plantuml-public
+    - openplatform
+      - shelfmark
+      - holdings
+    - infrastructure
+  - Plantuml-private
+    - ddb-services
+      - follow-searches
+      - loan-history
+      - material-cover
+      - material-list
+      - subscription
+    - ddb-user-interfaces
+      - ddb-cms
+        - gantt
+        - red-routes
+        - use-cases
+        - interactions
+      - biblioteket-app
+      - ereolen
+      - litteratursiden
