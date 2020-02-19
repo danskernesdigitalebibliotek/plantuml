@@ -15,7 +15,7 @@ jobs:
       - name: Generate images from diagrams
         uses: docker://miy4/plantuml
         with:
-          args: "./docs/*.puml -tsvg"
+          args: "./docs/*.puml -tsvg -charset utf-8"
       - name: Commit updated diagram images
         uses: EndBug/add-and-commit@master
         with:
@@ -28,7 +28,7 @@ jobs:
       - name: Generate images from diagrams - recursive
         uses: docker://miy4/plantuml
         with:
-          args: "./docs/**/*.puml -tsvg"
+          args: "./docs/**/*.puml -tsvg -charset utf-8"
       - name: Commit updated diagram images
         uses: EndBug/add-and-commit@master
         with:
