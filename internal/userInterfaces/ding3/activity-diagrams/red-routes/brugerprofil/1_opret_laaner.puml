@@ -1,0 +1,26 @@
+@startuml
+
+title Afleveringsfrist
+
+start
+
+:Klik på log ind;
+:Klik på "Opret låner";
+:indtast bruger ID og adgangskode;
+:Klik på næste;
+:Indtast nøglekortnummeret;
+:Klik på "Opret bruger";
+:Klik på Acceptér og;
+if (gem samtykke) then (ja)
+    :Acceptér, men gem IKKE samtykke;
+    else (nej)
+    :Acceptér, og gem samtykke;
+endif
+:Udfyld brugerformular;
+:Klik på "Create me;
+:Bekræftelse på oprettelse;
+:Klik på log ud;
+
+stop
+
+@enduml

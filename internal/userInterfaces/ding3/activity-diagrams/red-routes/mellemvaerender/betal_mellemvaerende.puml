@@ -1,0 +1,20 @@
+@startuml
+
+title Betal bøde
+
+start
+
+:Log ind;
+:Klik på min konto;
+:Klik på mellemværende;
+if (Betal alle mellemværender) then (ja)
+:Klik på "Betal alle";
+else (nej)
+:Markér individuelle mellemværender;
+:Klik på "Betal valgte";
+endif
+:Log ud;
+
+stop
+
+@enduml

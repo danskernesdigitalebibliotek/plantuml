@@ -1,0 +1,21 @@
+@startuml
+Title Client requests queryList on behalf of patron
+
+'Skinparams
+skinparam monochrome true
+
+' Participants
+'actor       Patron
+boundary    DDBCMS      as "DDB CMS"
+control     Follow      as "Follow Searches service"
+boundary    OPsearch    as "Open Platform /seach"
+
+'Sequences
+DDBCMS -> Follow: Request query list by GUID
+    loop FOREACH query in list
+        Follow ->  OPsearch: Request hitCount of **enhanced query**
+        Follow <-- OPsearch: Return hitCount
+    end
+DDBCMS <-- Follow: Return queryList, **enhanced queries** and hitCounts
+
+@enduml

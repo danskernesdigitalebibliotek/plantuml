@@ -1,0 +1,81 @@
+@startuml
+title "DDB Cover service - Upload - Sequence diagram"
+
+header "list-services/docs/material_cover-upload_sequence_diagram.puml"
+
+/'
+EBP: Dette diagram er vildt uoverskueligt. Bør brydes op i flere uafhængige diagrammer
+'/
+
+actor "Library- \n employee" as employee
+boundary "computer"
+boundary "Upload \n interface" as upload
+boundary "Open Platform \n /search" as OPsearch
+boundary "Open Platform \n /cover" as OPcover
+boundary "DDB Cover service" as cover
+
+== Log in ==
+
+employee->upload: Log ind.
+employee<--upload: Logged ind.
+
+== Add images from computer with or without material ID in file-name ==
+
+employee->upload: Choose image file(s) for upload \n (pathfinder or drag'n'drop).
+upload->computer: Get file(s).
+computer-->upload: Return file(s).
+
+== Manually add Datawell identifiers to images ==
+
+loop FOR EACH image on the list
+    alt IF file-name IS a valid Datawell identifier
+        upload->OPsearch: Request Datawell Object for material ID.
+            alt IF material ID EXISTS in Datawell?
+                OPsearch-->upload: Return Datawell object.
+            else ELSE material ID does NOT exist in Datawell
+                OPsearch-->upload: Return unknown/missing/inaccessible \n record: {material ID}.
+            end
+    else ELSE file-name is NOT a valid Datawell identifier.
+        OPsearch-->upload: Return unknown/missing/inaccessible \n record: {material ID}.
+	end
+
+== Display list of image with OR without Datawell object ==
+
+    alt IF image has Datawell object
+      upload-->employee: Display image and Datawell object.
+    else ELSE image has NO Datawell object
+	    upload-->employee: Display image and input field.
+        employee->upload: Input Datawell identifier.
+        upload-->employee: Display list of images and metadata.
+    end
+
+== Remove image/Datawell object OR just Datawell object ==
+
+    employee->upload: Request list of images \n the library employees have uploaded.
+        upload->OPcover:  Request list of images \n the library employees have uploaded.
+            OPcover->cover:  Request list of images \n the library employees have uploaded.
+            OPcover<--cover:  Return list of images.
+        upload<--OPcover:  Return list of images.
+    upload-->employee: Display list of images \n the library employees have uploaded.
+	alt IF employee deletes image
+        employee->upload: Remove image.
+        upload->upload: Delete mage and Datawell object.
+		upload-->employee: Display list without image \n and Datawell object.
+	else ELSE employee deletes Datawell object
+        employee->upload: Remove Datawell object.
+        upload->upload: Delete Datawell object.
+    	upload-->employee: Display image without \n Datawell object on list.                	
+	end
+end
+
+== Upload image(s) to DDB Cover service ==
+
+upload->upload: Display copyright terms and checkmark.
+employee->upload: Upload list of images and Datawell \n objects to DDB Cover service.
+    upload->OPcover:  Upload list of images.
+        OPcover->cover:  Upload list of images.
+        OPcover<--cover:  Return message images uploaded.
+    upload<--OPcover:  Return message images uploaded.
+upload-->employee: Return message images uploaded.
+
+@enduml

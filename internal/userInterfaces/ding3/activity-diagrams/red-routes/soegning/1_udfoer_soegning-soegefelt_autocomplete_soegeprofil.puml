@@ -1,0 +1,39 @@
+@startuml
+
+title Søgefelt med autocomplete og søgeprofil
+
+start
+
+:Klik i søgefeltet;
+:Tast søgestrengen;
+
+fork
+
+:OPTION autocomplete;
+
+IF (Viser autocomplete et relevant resultat?) then (ja)
+:Klik på et resultat i autocomplete;
+ELSE (nej)
+:Klik på "Søg" knappen;
+endif
+
+fork again
+
+:OPTION søgeprofil;
+
+:Åben søgeprofil dropdown;
+
+IF (Viser søgeprofil en relevant filtreringsmulighed) then (ja)
+:Klik på et filter i søgeprofil;
+ELSE (nej)
+:Klik på "Søg" knappen;
+endif
+
+
+end fork
+
+:Vis søgeresultatet;
+
+stop
+
+@enduml

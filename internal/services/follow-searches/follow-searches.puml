@@ -1,0 +1,55 @@
+@startuml
+ 
+    Title DEPRECATED --1. Patron adds search query to Follow Searches service--
+
+            Note left of Patron
+            Prerequisite Patron
+            is authenticated,
+            else promt for login.
+            end note
+
+            "Patron"->"DDB CMS": Click "Save search query" icon.
+
+            Note left of "DDB CMS"
+                Prerequisite Client
+                 is authenticated.
+            end note
+            
+            "DDB CMS"->"Patron": Display modal window and promt user to enter title of search query.
+
+            "Patron"->"DDB CMS": Enter title of search query and click Save button.
+            "DDB CMS"->"Follow Searches service": Post search query and title of search query.
+            "Follow Searches service"->"Follow Searches service": Set dateLastSeen for each query = NOW.
+            
+            Note right of "Follow Searches service"
+            Dateformat = ISO8601 and UTC (YYYY-MM-DDThh:mm:ssZ).
+            NB. Time should round down to "00:00:00Z".
+            end note
+            
+@enduml
+
+
+@startuml
+    Title DEPRECATED --2. Client requests queryList on behalf of patron--
+
+    "DDB CMS"->"Follow Searches service": Request query list.
+    loop FOREACH query in list
+        "Follow Searches service"->"Open Platform /seach": Request hitCount of search query.
+        "Open Platform /seach"-->"Follow Searches service": Return hitCount.
+    end
+    "Follow Searches service"-->"DDB CMS": Return queryList + hitCounts.
+@enduml
+
+@startuml
+    Title DEPRECATED --3. Client requests result per query on behalf of patron--
+
+    "DDB CMS"->"Follow Searches service": Request result for query.
+    "Follow Searches service"->"Open Platform /search": Request query result as PID's.
+    
+    Note right of "Open Platform /search"
+            Query and "facet.acsource=bibliotekskatalog and" + "holdingsitem.accessiondate>{lastDateSeen}.
+            lastDateSeen in format "YYYY-MM-DDT00:00:00Z".
+            end note
+    "Open Platform /search"-->"Follow Searches service": Return query result.
+    "Follow Searches service"-->"DDB CMS": Return list of PID's.
+@enduml

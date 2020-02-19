@@ -1,0 +1,33 @@
+@startuml
+
+title "Import cover - Sequence Diagram"
+
+control "Import" as import
+collections "Import scripts" as imports
+collections "Vendors" as vendors
+database "Vendor cover source" as vendorsource
+boundary "DDB Cover service" as cover
+boundary "Open Platform \n /search" as OPsearch
+database "Reference table" as reference
+database "Rebuild reference table" as rebuild
+database "Source table" as source
+database "Material identifier table" as identifiers
+database "Cloudinary \n cover repository" as cloudinary
+
+import->imports: Run import scripts \n to get new covers.
+imports->vendors: Request new covers.
+vendors->vendorsource: Collect covers.
+vendorsource-->vendors: Return cover images + cover ID.
+vendors-->imports: Return cover images + cover ID.
+imports-->import: Return cover images + cover ID.
+import->cover: Post new cover images + cover IDs.
+cover->OPsearch: Request material identifiers and \n metadata (material identifier.
+OPsearch-->cover: Return material idenfiers \n and metadata.
+cover->identifiers: Post material identifiers.
+cover->source: Post material identifiers.
+identifiers->rebuild: Post keypairs.
+source->rebuild: Post RefID.
+rebuild->reference: Post keypairs+RefID.
+cover->cloudinary: Post image + RefID.
+
+@enduml

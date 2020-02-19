@@ -1,0 +1,31 @@
+@startuml
+
+title Use case diagram - Search result
+
+rectangle "search result" {
+
+  Patron -down-> (Follow search)
+  (Follow search) -down-> [Follow searches service] : Served by
+
+  Patron -down-> (Select \n work collection)
+  (Select \n work collection) -down-> [Opensearch service] : Served by
+  (Select \n work collection) <-down- (Filter search result) : extends
+  (Select \n work collection) <-down- (Sort search result) : extends
+  (Select \n work collection) <-down- (Paginate search result) : extends
+  (Select \n work collection) <-down- (Assess number og results - hitcount) : extends
+
+  Patron -down-> (View details \n of work collection)
+  (View details \n of work collection) -down-> [Opensearch service] : Served by
+  
+  Patron -down-> (Assess availability \n of work collection)
+  (Assess availability \n of work collection) -down-> [FBS service] : Served by
+
+  Patron -down-> (Reserve example \n from work collection)
+  (Reserve example \n from work collection) -down-> [FBS service] : Served by
+
+  Patron -down-> (Save material)
+  (Save material) -down-> [Material list service] : Served by
+
+  }
+
+@enduml

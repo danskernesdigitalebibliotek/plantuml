@@ -1,0 +1,32 @@
+@startuml
+Title Patron adds query to "Follow Searches service"
+
+'Skinparams
+skinparam monochrome true
+
+' Participants
+actor       Patron
+    note right of Patron
+        Patron is identified
+        by GUID
+    end note
+boundary    DDBCMS      as "DDB CMS"
+    note left of DDBCMS
+        Prerequisite Client
+        is authenticated.
+    end note
+control     Follow      as "Follow Searches service"
+'boundary   OPsearch    as "Open Platform /seach"
+
+'Sequences
+Patron -> DDBCMS: Click "Save query" icon.
+Patron <- DDBCMS: Display modal window\nand prompt user to\n enter title of query.
+Patron -> DDBCMS: Enter title of query\nand click [Save] button.
+
+DDBCMS -> Follow: Post query\n and title of query.
+Follow -> Follow: Set dateLastSeen = NOW
+
+DDBCMS <-- Follow: Return **enhanced query**
+Patron <-- DDBCMS: Close modal window
+
+@enduml

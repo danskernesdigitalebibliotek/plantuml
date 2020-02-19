@@ -1,0 +1,34 @@
+@startuml
+
+title "DDB Cover service - Upload - Usecase diagram"
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Medarbejder \n på et bibliotek" as medarbejder
+actor "Platform /cover" <<application>> as cover
+actor "Platform /search" <<application>> as search
+actor "Medarbejder PC" <<device>> as computer
+actor "DDB CMS /user" <<application>> as login
+
+rectangle "Upload materialeforside" {
+
+
+    :medarbejder: --> (1. Log ind)
+    (1. Log ind) <-- :login:
+   
+    :medarbejder: --> (2. Hent billeder)
+    (3. Godkend opløsning) <-- :cover:
+    (2. Hent billeder) <-- :computer:
+    (3. Godkend opløsning) .> (2. Hent billeder) : extends
+    :medarbejder: --> (4. Indtast pid)
+    
+    :medarbejder: --> (5. Verificer match)
+    (5. Verificer match) .> (6. Hent metadata) : include
+    (6. Hent metadata) <-- :search:
+
+    :medarbejder: --> (7. Upload)
+    (7. Upload) <-- :cover:
+}
+
+@enduml

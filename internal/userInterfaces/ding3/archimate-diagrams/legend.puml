@@ -1,0 +1,26 @@
+@startuml
+
+sprite $bProcess jar:archimate/business-process
+sprite $aService jar:archimate/application-service
+sprite $aComponent jar:archimate/application-component
+sprite $aFunction jar:archimate/application-function
+sprite $dObject jar:archimate/object
+sprite $aProcess jar:archimate/application-process
+sprite $aCollaboration jar:archimate/application-collaboration
+sprite $sSoftware jar:archimate/system-software
+
+legend left
+DDB Architecture - Diagram legend.
+
+<$bProcess> - Business process.
+<$aComponent> - Application component.
+<$aService> - Application service.
+<$aFunction> - Application function.
+<$dObject> - Data object.
+<$aProcess> - Application process.
+<$aCollaboration> - Application collaboration.
+<$sSoftware> - System software.
+
+endlegend
+
+@enduml

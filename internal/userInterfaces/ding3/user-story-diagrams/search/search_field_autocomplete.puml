@@ -1,0 +1,16 @@
+@startuml
+
+title Use case diagram - Search field and autocomplete
+
+rectangle "Search field" {
+
+  Patron -down-> (Search \n library collections)
+  (Search \n library collections) -down-> [Opensearch service] : Served by
+
+  (Search \n library collections) <-down- (Autocomplete) : extends 
+  (Search \n library collections) <-down- (Search profile) : extends
+  (Search \n library collections) <-down- (CQL - Advanced search) : extends
+  
+  }
+
+@enduml

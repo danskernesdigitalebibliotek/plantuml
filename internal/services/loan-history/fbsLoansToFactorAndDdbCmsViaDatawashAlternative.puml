@@ -1,0 +1,54 @@
+@startuml
+
+package "Systematic" {
+    package "FBS" {
+      database "FBS Låner"{
+        [Udlånsdata]
+      }
+    }
+}
+
+package "Kombit" {
+    package "Service platformen" {
+        database "Dueslag" {
+            [Udlånsdata \n (Med CPR)]
+        }
+    }
+}
+
+
+package "National infrastruktur" {
+    [CULR WS]
+}
+
+package "Danskernes Digitale Bibliotek" {
+    package "Openplatform" {
+        [Data Wash WS]
+        [Loan History WS \n (GUID)]
+        [PatronAccept WS \n (GUID)]
+    }
+    package "DDB CMS" {
+        [DDB CMS Loan History list]
+    }
+    database "Faktor" {
+        [Statistik rapporter \n (Uden CPR, med Persistent ID)]
+    }
+    package "Openplatform" {
+        [Adgangsplatformen WS]
+    }
+}
+
+[Udlånsdata] -right-> [Udlånsdata \n (Med CPR)]: TRIN A.1
+[Udlånsdata \n (Med CPR)] -down-> [Data Wash WS]: TRIN A.2
+
+[Data Wash WS] -left-> [Statistik rapporter \n (Uden CPR, med Persistent ID)]: TRIN B.1 \n Send statistikdata \n med Persistent id.
+
+[DDB CMS Loan History list] -up-> [PatronAccept WS \n (GUID)]: TRIN C.1: \n Opret bruger accept.
+[Data Wash WS] --> [PatronAccept WS \n (GUID)]: TRIN C.2: \n Hent lånere (GUID) \n der ønsker lånehistorik.
+[Data Wash WS] -up-> [CULR WS]: TRIN C.3: \n Hent GUID \n ud fra CPR.
+[Data Wash WS] --> [Loan History WS \n (GUID)]: TRIN C.4: \n Send lånehistorik \n for de pågældende lånere.
+
+[DDB CMS Loan History list] -up-> [Adgangsplatformen WS]: TRIN D.1: \n Autentificer låner, \n og hent GUID.
+[DDB CMS Loan History list] -up-> [Loan History WS \n (GUID)]: TRIN D.2: \n Hent lånehistorik \n for autentificeret låner.
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+
+title Ændre afhentningsfilial
+
+start
+
+:Log ind;
+:Klik på min konto;
+:Klik på "Redigér brugerprofil";
+:Skift afhentningsfilial;
+:Klik på "Gem";
+:Log ud;
+
+stop
+
+@enduml

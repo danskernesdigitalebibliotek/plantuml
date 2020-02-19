@@ -1,0 +1,55 @@
+@startuml
+
+title MoreInfo - Component Diagram
+
+note top of CMS : Replacing diagrams/CoverServiceArchitecture.svg\nand diagrams/CoverServiceArchitecture.2018.svg
+
+package "DDB CMS" as CMS {
+    component [Show cover] as SHOW
+}
+
+node "DBC" {
+    [MoreInfo Logic] as MORELOGIC
+    interface "MoreInfo Service"  as MOREINFO
+    interface "MoreInfo Upload Service"  as UFO
+    [MoreInfo Mapping] as MOREMAPPING
+
+    database "Datawell" {
+        [Stored Metadata] as META
+        [HasCoverIndex] as HASCOVER
+    }
+    database "MoreInfo Raw Store" {
+        [Stored images] as MOREIMAGE
+    }
+} 
+
+database "PressReader" {
+    [PressReader FTP] as PRESSFTP
+}
+
+database "Bogportalen" {
+    [Bogportalen FTP] as BOGFTP
+}
+
+SHOW --> META: Query
+SHOW <.. META: Meta data
+
+META --> HASCOVER: ID
+META <.. HASCOVER: Boolean
+
+CMS --> HASCOVER: ID
+CMS <.. HASCOVER: Boolean
+
+
+
+SHOW --> MOREINFO
+MOREINFO -- MORELOGIC
+MORELOGIC -- MOREIMAGE
+MOREMAPPING <-down-- PRESSFTP
+MOREMAPPING <-down-- BOGFTP
+MOREMAPPING --> MOREIMAGE
+MOREMAPPING -> HASCOVER
+CMS -- UFO
+UFO -- MORELOGIC
+MORELOGIC -- MOREIMAGE
+@enduml

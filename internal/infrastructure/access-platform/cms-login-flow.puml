@@ -1,0 +1,72 @@
+@startuml
+caption DDB CMS User authentification (Adgangsplatformen)
+
+'Single Sign On
+
+' Skinparams '
+skinparam monochrome true
+
+' Participants
+actor       Patron
+boundary    Browser
+entity      DDBCMS  as "DDB CMS"
+control     login.bib.dk    /' "AccessPlatform" '/
+boundary    BORCHK          /'as "Borrower Check" '/
+            
+boundary CULR
+boundary LMS /'as "Library Management System" '/
+
+
+Patron->Browser: Log in
+Browser->DDBCMS: Log in
+DDBCMS->login.bib.dk: Request authentification of user
+
+alt User is already logged in (login cookie)
+    DDBCMS <-- login.bib.dk: Return GUID, session token, \nmuncipality ID and \nactive agencies for userID
+            note left: If profile was created on login, \nlogin agency is the only returned\nfor userID@Agency
+    Browser <-- DDBCMS: User logged in
+else Login process
+    Browser <- login.bib.dk: Get (Agency), userID and PIN
+    Patron <- Browser: Enter (Agency),\nuserID and PIN
+    Patron -> Browser: (Agency), userID and PIN
+    Browser --> login.bib.dk: \nAgency, userID and PIN
+
+    login.bib.dk -> BORCHK: Agency, userID and PIN
+    BORCHK -> LMS: Authenticate (NCIP): \nAgency, userID and PIN
+    BORCHK <-- LMS: TRUE/FALSE
+
+    alt BORCHK: FALSE (User rejected)
+        login.bib.dk <-- BORCHK: User rejected
+        Browser <-- login.bib.dk: Login failed
+    else BORCHK: TRUE (User authenticated)
+        login.bib.dk <-- BORCHK: User authenticated
+
+        alt IF CPR
+            login.bib.dk->CULR: Get profile for userID@Agency
+                note left: Profile for userID@Agency is created \nif not found with muncipality ID
+            CULR->login.bib.dk: Return GUID and \nactive agencies for userID
+            login.bib.dk -> Browser: Session token
+            DDBCMS <-- login.bib.dk: Return GUID, and active agencies for user
+                note right:+ additional info configured (CPR, Local user ID)
+
+            Browser <- login.bib.dk : Set login cookie (User Token)
+            Browser <-- DDBCMS: User logged in
+                note right: Ready to get more user info from LMS
+
+        else No CPR
+            DDBCMS <-- login.bib.dk: Return UserId, pin
+            login.bib.dk -> login.bib.dk: Revoke CMS client token
+            
+            DDBCMS -> LMS: PatronAut: UserId, pin
+            DDBCMS <-- LMS: PatronAut: TRUE/FALSE, patron
+            ' /external/{agencyid}/patrons/authenticate/v3
+            
+            alt LMS PatronAut: FALSE (User rejected)
+                Browser <-- DDBCMS: Login failed
+            else
+                Browser <-- DDBCMS: Login succeded: User info
+            end
+        end
+    end
+end
+@enduml

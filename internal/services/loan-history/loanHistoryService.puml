@@ -1,0 +1,56 @@
+@startuml
+
+actor "Patron"
+boundary "Biblioteket app"
+collections "Adgangsplatform"
+boundary "Loan History service"
+boundary "Patron Accept service"
+boundary "Data Wash service"
+boundary "CULR service"
+collections "Service Platform"
+collections "FBS"
+
+== Låner accepterer opsamling af lånehistorik. ==
+
+    "Patron"->"Biblioteket app": Log ind.
+    "Biblioteket app"->"Adgangsplatform": Authentificer låner.
+    "Adgangsplatform"->"Biblioteket app": Logget ind (GUID + PatronID).
+    "Biblioteket app"->"Patron": Prompt for ja \n til at opsamle lånehistorik.
+    "Patron"->"Biblioteket app": Accept af \n at gemme lånehistorik.
+    "Biblioteket app"->"Patron Accept service": Gem Låner accept (GUID).
+    "Patron Accept service"->"Biblioteket app": Låner accept gemt.
+    "Biblioteket app"->"Patron": Vis feedback \n til låneren.
+
+== Løbende opsamling af lånehistorik for lånere der har givet accept. ==
+
+    loop Daglig eksport af lånehistorik fra FBS til Service Platform dueslag (CPR + PID)..
+        "FBS"->"Service Platform": Send daglig lånehistorik \n til dueslag (CPR + PID).
+        loop Daglig  hentning af Lånehistorik fra Service Platform dueslag til Data Wash servicen.
+            "Data Wash service"->"Service Platform": Hent dagligt data dump \n af lånehistorik (CPR + PID).
+            "Service Platform"->"Data Wash service": Returnér data dump (CPR + PID). 
+            loop Hent alle lånere der har givet accept.
+                "Data Wash service"->"Patron Accept service": Hent alle lånere \n der har givet accept \n til at opsamle lånehistorik (GUID).
+                "Patron Accept service"->"Data Wash service": Returnér lånere (GUID).
+                "Data Wash service"->"CULR service": Foretage opslag med lånerens GUID \n og hent CPR nummer.
+                "CULR service"->"Data Wash service": Returnér CPR nummer.
+                loop Opdatér lånehistorikken for hver låner der har givet accept.
+                    "Data Wash service"->"Data Wash service": Udtræk lånehistorik \n for hver låner (CPR nummer + PID).
+                    alt Låneren findes ikke i Loan History service.
+                        "Data Wash service"->"Loan History service": Opret låner \n og tilføje lånehistorik (GUID + PID).
+                        else Låneren findes allerede i Loan History service.
+                        "Data Wash service"->"Loan History service": Tilføje lånehistorik \n for hver låner (GUID + PID).
+                    end
+                end
+            end
+        end
+        
+    end
+    
+== Låner får vist lånehistorik i brugergrænsefladen. ==
+
+    Patron->"Biblioteket app": Åben lånehistorik liste.
+    "Biblioteket app"->"Loan History service": Hent lånehistorik (GUID).
+    "Loan History service"->"Biblioteket app": Returnér lånehistorik (PID)
+    "Biblioteket app"->"Patron": Vis lånehistorik liste.
+    
+@enduml

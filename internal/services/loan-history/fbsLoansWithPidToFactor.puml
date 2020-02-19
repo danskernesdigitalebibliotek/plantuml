@@ -1,0 +1,46 @@
+@startuml
+
+package "Systematic" {
+    package "FBS" {
+      database "FBS Låner"{
+        [Udlånsdata]
+      }
+      database "FBS Statistik"{
+        [Statistikdata \n (Uden CPR) \n (Med Persistent ID)]
+      }
+    }
+}
+
+package "Kombit" {
+    package "Service platformen" {
+        database "Dueslag til FAKTOR " {
+            [Statistik datadump \n (Uden CPR) \n (Med Persistent ID)]
+        }
+        database "Dueslag til Danmarks Statistik" {
+            [Udlånsdata datadump \n (Med CPR)]
+        }
+    }
+}
+
+package "Danmarks Statistik" {
+  database "DST" {
+        [Udlånsdata \n (Aggregerede uden CPR)]
+  }
+}
+
+package "Danskernes Digitale Bibliotek" {
+  database "Faktor" {
+        [Statistik rapporter (Uden CPR, med Persistent ID) \n Aggregerede data (Uden CPR)]
+  }
+}
+ 
+[Udlånsdata] -left-> [Statistikdata \n (Uden CPR) \n (Med Persistent ID)]: TRIN A.1
+[Statistikdata \n (Uden CPR) \n (Med Persistent ID)] -down-> [Statistik datadump \n (Uden CPR) \n (Med Persistent ID)]: TRIN A.2
+[Statistik datadump \n (Uden CPR) \n (Med Persistent ID)]-down-> [Statistik rapporter (Uden CPR, med Persistent ID) \n Aggregerede data (Uden CPR)]: TRIN A.3
+
+
+[Udlånsdata] -down-> [Udlånsdata datadump \n (Med CPR)]: TRIN B.1
+[Udlånsdata datadump \n (Med CPR)] -down-> [Udlånsdata \n (Aggregerede uden CPR)]: TRIN B.2
+[Udlånsdata \n (Aggregerede uden CPR)] -left-> [Statistik rapporter (Uden CPR, med Persistent ID) \n Aggregerede data (Uden CPR)]: TRIN B.3
+
+@enduml

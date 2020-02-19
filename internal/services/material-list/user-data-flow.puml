@@ -1,0 +1,62 @@
+@startuml
+
+title User Data Flow (Open List -> Material List)- Sequence Diagram
+'2020-02-07T11:58:00/EBP
+
+' Removing color and border from cards
+skinparam monochrome true
+
+'-- Participants --
+actor User
+boundary "DDB CMS" as CMS
+boundary "Access\nplatform" as AP
+' control "Shopping Cart" as SC
+boundary "Open\nList" as B14
+boundary "Material\nList" as ML
+database "Subscription\nService" as SS
+boundary Borchk as BORCHK
+entity FBS
+database CULR
+
+
+== User transfer ==
+FBS     ->  CULR: **CPR**, **PatronID** \nLocal ID's: Borrower card, \nUni-login, Sundhedskort
+
+== Login ==
+User    ->  AP: User ID + PIN
+AP      ->  BORCHK: User ID + PIN
+BORCHK  ->  FBS: User ID + PIN
+BORCHK  <-- FBS: OK
+AP      <-- BORCHK: OK
+AP      ->  CULR: User ID
+AP      <-- CULR: **CPR**, **PatronID** \nMunicipality, Local ID's: \nBorrower card, \nUni-login, Sundhedskort
+AP      --> CMS: **CPR**, **PatronID** \nMunicipality, Local ID's: \nBorrower card, \nUni-login, Sundhedskort
+
+== Open List migration ==
+
+CMS -> ML: GUID
+
+alt List found
+    CMS     <-- ML: List
+else No list found
+    autonumber
+        CMS ->  B14: CPR
+        CMS <-- B14: List or FALSE
+        CMS ->  B14: Borrower card
+        CMS <-- B14: List or FALSE
+        CMS ->  B14: User name
+note right
+	User name (from FBS)
+end note
+    CMS     <-- B14: List or FALSE
+    autonumber stop
+    
+    alt List with content
+        CMS ->  ML: GUID, merged lists
+        ML  ->  SS: Material List Subscription
+        ML  <-- SS: OK
+        CMS <-- ML: List
+    end
+end
+
+@enduml

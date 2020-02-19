@@ -1,0 +1,43 @@
+ "FBS" {
+      database "FBS Låner"{
+        [Udlånsdata]
+      }
+      database "FBS Statistik"{
+        [Statistikdata \n (Uden CPR)]
+      }
+    }
+}
+
+package "Kombit" {
+    package "Service platformen" {
+        database "Dueslag til FAKTOR " {
+            [Statistik datadump \n (Uden CPR)]
+        }
+        database "Dueslag til Danmarks Statistik" {
+            [Udlånsdata datadump \n (Med CPR)]
+        }
+    }
+}
+
+package "Danmarks Statistik" {
+  database "DST" {
+        [Udlånsdata \n (Med CPR)]
+  }
+}
+
+package "Danskernes Digitale Bibliotek" {
+  database "Faktor" {
+        [Statistik rapporter & Aggregerede data \n (Uden CPR)]
+  }
+}
+ 
+[Udlånsdata] -left-> [Statistikdata \n (Uden CPR)]: TRIN A.1
+[Statistikdata \n (Uden CPR)] -down-> [Statistik datadump \n (Uden CPR)]: TRIN A.2
+[Statistik datadump \n (Uden CPR)]-down-> [Statistik rapporter & Aggregerede data \n (Uden CPR)]: TRIN A.3
+
+
+[Udlånsdata] -down-> [Udlånsdata datadump \n (Med CPR)]: TRIN B.1
+[Udlånsdata datadump \n (Med CPR)] -down-> [Udlånsdata \n (Med CPR)]: TRIN B.2
+[Udlånsdata \n (Med CPR)] -left-> [Statistik rapporter & Aggregerede data \n (Uden CPR)]: TRIN B.3
+
+@enduml

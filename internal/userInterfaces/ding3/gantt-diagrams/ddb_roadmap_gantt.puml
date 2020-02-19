@@ -1,0 +1,148 @@
+@startgantt
+
+project starts the 2020/01/01
+
+saturday are closed
+sunday are closed
+2019/12/23 to 2020/01/03 is closed
+2020/02/10 to 2020/02/14 is closed
+2020/04/06 to 2020/04/13 is closed
+2020/05/08 is closed
+2020/05/21 is closed
+2020/06/01 is closed
+
+-- Indledende analyser --
+
+    [AN: Genbesøg DDB CMS / Bibliotek.dk GAP analyse]               lasts 1 days
+    then [AN: Openplatform målarkitektur for dekstop]               lasts 1 days
+then [Indledende analyser feature complete]                         lasts 1 days
+
+-- Open Platform udvikling --
+
+    [Open Platform udvikling] starts at [Indledende analyser feature complete]'s end
+    then [Udvikling af nyt format i Open Format]                    lasts 1 days
+    then [Udvikling af /FBS endpoint i Open Platform]               lasts 1 days
+    then [Udvikling af mangler i /search endpoint i Open Platform]  lasts 1 days
+then [Open Platform udvikling feature complete]                     lasts 1 days
+
+-- [Ding3 skellet] --
+
+[Ding3 skellet EPIC] starts at [Indledende analyser feature complete]'s end
+    then [Etablering af Drupal 8]                                   lasts 0 days
+    then [FN: Logo og sidehoved]                                    lasts 0 days
+    then [FN: hovedmenu med undermenuer]                            lasts 0 days
+    then [FN: Footermenu og kontaktinformation]                     lasts 0 days
+    then [Etablering af Github repository]                          lasts 0 days
+    then [Etablering af Continuous integration pipeline]            lasts 0 days
+then [Ding3 skellet feature complete]                               lasts 14 days
+
+
+-- Søgegrænseflade --
+
+[Søgegrænseflade EPIC] starts at [Ding3 skellet feature complete]'s end
+    [Søgefelt og autocomplete] starts at [Søgegrænseflade EPIC]'s end
+        then [WS: Ortograf]                                         lasts 1 days
+        then [FN: Search field]                                     lasts 1 days
+        then [FN: Search autocomplete]                              lasts 1 days
+    [Søgeresultat, filtrer, rankering, boost, sorter og paginer] starts at [Søgegrænseflade EPIC]'s end
+        then [WS: Openlist Openformat]                              lasts 1 days
+        then [FN: Search facetbrowser]                              lasts 1 days
+        then [FN: Search rankering og boost]                        lasts 1 days
+        then [FN: Search sort]                                      lasts 1 days
+        then [FN: Search result]                                    lasts 1 days
+        then [FN: Search pagination]                                lasts 1 days
+        then [FN: Search Føj til huskeliste (Material list ws)]     lasts 1 days
+        then [FN: Search Gem søgning (Follow searches ws)]          lasts 1 days
+    [Værk- og materialevisning] starts at [Søgegrænseflade EPIC]'s end
+        then [FN: Work manifestation-list]                          lasts 1 days
+        then [FN: Manifestation details]                            lasts 1 days
+        then [FN: Manifestation relations]                          lasts 1 days
+        then [FN: work serier]                                      lasts 1 days
+        then [FN: work periodical-list]                             lasts 1 days
+        then [FN: work infomedia]                                   lasts 1 days
+        then [FN: work fuldtekst visning (Docbook)]                 lasts 1 days
+        then [FN: work Se online (hasOnlineAccess]                  lasts 1 days
+        then [Søgegrænseflade feature complete]                     lasts 1 days
+then [Søgegrænseflade EPIC feature complete]                        lasts 1 days
+
+
+[Availability, beholdning og bestil EPIC] starts at [Søgegrænseflade EPIC feature complete]'s end
+    then [WS: Openplatform/FBS holdings, availability og order 1:1] lasts 1 days
+    then [FN: Search availability]                                  lasts 1 days
+    then [FN: Manifestation holdings]                               lasts 1 days
+    then [FN: Manifestation order]                                  lasts 1 days
+    then [FN: work periodical-list]                                 lasts 1 days
+    then [FN: Manifestation order periodical]                       lasts 1 days
+then [Availability_holdings_order feature complete]                 lasts 1 days
+
+
+-- Lånerstatus --
+
+[Lånerstatus EPIC] starts at [Ding3 skellet feature complete]'s end
+    then [WS: Openplatform/FBS lånerstatus 1:1]                     lasts 1 days
+    then [WS: Adgangsplatformen]                                    lasts 1 days
+    then [FN: User login]                                           lasts 1 days
+    then [FN: User loan status]                                     lasts 1 days
+    then [FN: User mellemværender (DIBS)]                           lasts 1 days
+then [Availability_holdings_order feature complete]                 lasts 1 days
+
+[Lånerstatus eReolen EPIC] starts at [Availability_holdings_order feature complete]'s end
+    then [WS: publizon]                     lasts 1 days
+    then [FN: Lånerstatus fra eReolen]                                           lasts 1 days
+then [Lånerstatus eReolen feature complete]                 lasts 1 days
+
+
+-- Brugerprofil --
+
+[Brugerprofil EPIC] starts at [Ding3 skellet feature complete]'s end
+    then [WS: Openplatform/FBS brugerprofil 1:1]                    lasts 1 days
+    then [FN: User profile]                                         lasts 1 days
+then [Availability_holdings_order feature complete]                 lasts 1 days
+
+
+-- Formidlingsgrænsefladen --
+
+[For- og sektionssider EPIC] starts at [Ding3 skellet feature complete]'s end
+    then [FN: Sektioner]                                            lasts 1 days
+    then [FN: Karusel]                                              lasts 1 days
+    then [FN: Promovering af sektioner]                             lasts 1 days
+then [For- og sektionssider feature complete]                       lasts 1 days
+
+[Artikler EPIC] starts at [For- og sektionssider feature complete]'s end
+    then [WS: CMS Content service]                                  lasts 1 days
+    then [WS: BPI]                                                  lasts 1 days
+    then [FN: Nyheder]                                              lasts 1 days
+    then [FN: Tabroll på for- og sektionssider]                     lasts 1 days
+then [Artikler feature complete]                     lasts 1 days
+
+[Arrangementer og billetsystem EPIC] starts at [For- og sektionssider feature complete]'s end
+    then [WS: Place2book og abstraktionslag]                        lasts 1 days
+    then [FN: Arrangementer]                                        lasts 1 days
+then [Arrangementer og billetsystem feature complete]               lasts 1 days
+
+[Biblioteksfilialer og åbningstider EPIC] starts at [For- og sektionssider feature complete]'s end
+    then [WS: Place2book og abstraktionslag]                        lasts 1 days
+    then [FN: Arrangementer]                                        lasts 1 days
+then [Biblioteksfilialer og åbningstider feature complete]          lasts 1 days
+
+[Kampagner EPIC] starts at [For- og sektionssider feature complete]'s end
+    then [WS: Biblioteksvagten widget]                              lasts 1 days
+then [Kampagner feature complete]                            lasts 1 days
+
+[Biblioteksvagten EPIC] starts at [For- og sektionssider feature complete]'s end
+    then [WS: Biblioteksvagten widget]                              lasts 1 days
+then [Biblioteksvagten feature complete]                            lasts 1 days
+
+[eKurser EPIC] starts at [For- og sektionssider feature complete]'s end
+    then [WS: Ekurser oversigtsside]                                lasts 1 days
+then [eKurser feature complete]                                     lasts 1 days
+
+[Søgeresultat for redaktionelt indhold EPIC] starts at [For- og sektionssider feature complete]'s end
+    then [WS: Søgeresultat for redaktionelt indhold]                                lasts 1 days
+then [Søgeresultat for redaktionelt indhold feature complete]                                     lasts 1 days
+@endgantt
+
+http://plantuml.com/gantt-diagram
+AN = Analyse
+FN = Funktion
+WS = Web service

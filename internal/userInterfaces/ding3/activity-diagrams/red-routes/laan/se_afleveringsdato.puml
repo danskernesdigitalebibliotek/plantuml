@@ -1,0 +1,15 @@
+@startuml
+
+title Se afleveringsdato
+
+start
+
+:Log ind; 
+:Klik på "Min konto;
+:Klik på "Lån";
+:Se afleveringsfrist;
+:Klik på log ud;
+
+stop
+
+@enduml

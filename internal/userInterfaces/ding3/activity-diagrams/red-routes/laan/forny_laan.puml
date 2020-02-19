@@ -1,0 +1,19 @@
+@startuml
+
+title Afleveringsfrist
+
+start
+
+:Klik på "Min konto"; 
+:Klik på "Lån";
+if (Markér flere lån) then (ja)
+    :Flere lån markéres;
+else (nej)
+    :Et lån markeres;
+endif
+:Klik på "Forny valgte";
+:Klik på "Log ud";
+
+stop
+
+@enduml

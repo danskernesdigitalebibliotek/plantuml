@@ -1,0 +1,25 @@
+@startuml
+title Subscription Service - Material list - Get list
+
+' Removing color and border from cards
+skinparam monochrome true
+
+' Participants
+boundary DDBCMS     as "DDB CMS"
+boundary MatList    as "Material\nList"
+database SubService as "Subscription"
+
+group Get list
+
+    DDBCMS	->	MatList: Get list
+    
+    alt List exists
+        DDBCMS	<--	MatList: Return list
+    else
+        DDBCMS	<--	MatList: Return error
+    end
+
+end
+
+
+@enduml

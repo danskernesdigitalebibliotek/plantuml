@@ -1,0 +1,75 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/ebbypeter/Archimate-PlantUML/master/Archimate.puml
+
+title DDB Arkitektur
+
+Package "Låner brugergrænseflader" {
+    Application_Component(ddb_cms, "DDB CMS")
+    Application_Component(bibliotekt_app, "Biblioteket APP")
+    Application_Component(bibliotek_dk, "Bibliotek.dk")
+    Application_Component(biblo_dk, "Biblo.dk")
+    Application_Component(nota, "Nota")
+    Application_Component(borger_dk, "Borger.dk")
+    Application_Component(ereolen, "eReolen")
+    Application_Component(ereolen_app, "eReolen APP")
+    Application_Component(ereolen_global, "eReolen Global")
+    Application_Component(ereolen_go, "eReolen GO")
+    Application_Component(biblioteksvagten, "Biblioteksvagten")
+    Application_Component(litteratursiden, "Litteratursiden")
+    Application_Component(filmstriben, "Filmstriben")
+    Application_Component(forfatterweb, "Forfatterweb")
+    Application_Component(rb_digital, "RB Digital")
+    Application_Component(bibzoom, "Bibzoom")
+    Application_Component(emusik, "eMusik")
+    Application_Component(faktalink, "Faktalink")
+    Application_Component(ffu_portaler, "FFU Portaler")
+    Application_Component(artesis_professionshøjskolerne, "Artesis Professionshøjskolerne")
+    Application_Component(FBS_skoleportal, "FBS Skoleportal")
+}
+
+Package "Professionelle brugergrænseflader" {
+    Application_Component(netpunkt, "Netpunkt")
+    Application_Component(data_io_admin, "Data I/O Admin")
+    Application_Component(finurlige_fakta, "Finurlige Fakta")
+    Application_Component(open_source_dbc, "Open Source DBC")
+    Application_Component(faktor, "Faktor")
+    Application_Component(erms, "ERMS")
+    Application_Component(open_agency_vip, "Open Agency VIP")
+    Application_Component(ffu_cms, "FFU CMS")
+    Application_Component(fbs_admin, "FBS Admin")
+    Application_Component(filmcentralen, "Filmcentralen")
+    Application_Component(quiz_dbc_dk, "Quiz.dbc.dk")
+}
+
+Package "Logiske sammenhængende web services eller endpoints" {
+    Application_Collaboration(adgangsplatformen, "Adgangsplatformen")
+    Application_Collaboration(open_platform, "Open Platform")
+    Application_Collaboration(fbs, "FBS")
+    Application_Collaboration(databrønd, "Databrønd")
+    Application_Collaboration(redia_app_platform, "Redia APP Platform")
+}
+
+sprite $bProcess jar:archimate/business-process
+sprite $aService jar:archimate/application-service
+sprite $aComponent jar:archimate/application-component
+sprite $aFunction jar:archimate/application-function
+sprite $dObject jar:archimate/object
+sprite $aProcess jar:archimate/application-process
+sprite $aCollaboration jar:archimate/application-collaboration
+sprite $sSoftware jar:archimate/system-software
+
+legend left
+DDB Architecture - Diagram legend.
+
+<$bProcess> - Business process.
+<$aComponent> - Application component.
+<$aService> - Application service.
+<$aFunction> - Application function.
+<$dObject> - Data object.
+<$aProcess> - Application process.
+<$aCollaboration> - Application collaboration.
+<$sSoftware> - System software.
+
+endlegend
+
+@enduml

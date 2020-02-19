@@ -1,0 +1,40 @@
+@startuml
+title Vis poster afhængig af type
+
+' Skinparams '
+skinparam monochrome true
+'skinparam handwritten true
+
+start
+
+:Opensearch /work PID ;
+
+if (Identifier = \n 870970-*:faust) then ( JA )
+    
+    if (Identifier = 870970-basis:faust) then ( JA )
+        :Basispost ;
+    elseif (Identifier = 870960-katalog:faust) then ( JA )
+        :Påhængspost ;
+    else ( NEJ )
+        :Posten findes ikke ;
+        :Vis ikke ;
+        stop
+    endif
+
+else ( NEJ )
+
+    if (Identifier = 7*-katalog:faust) then ( JA )
+        :Lokal katalogpost ;
+        :Ny forespørgsel med PID \n i primaryObjectIdentifier ;
+    else ( NEJ )
+        :Posten findes ikke ;
+        :Vis ikke ;
+        stop
+    endif
+      
+endif
+
+:Vis posten ;
+stop
+
+@enduml

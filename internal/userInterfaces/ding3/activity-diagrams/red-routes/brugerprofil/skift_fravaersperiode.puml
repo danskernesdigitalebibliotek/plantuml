@@ -1,0 +1,16 @@
+@startuml
+
+title Skift fraværsperiode
+
+start
+
+:Log ind;
+:Klik på min konto;
+:Klik på "Redigér brugerprofil";
+:Sæt start- og slutdato for fraværsperioden;
+:Klik på "Gem";
+:Log ud;
+
+stop
+
+@enduml

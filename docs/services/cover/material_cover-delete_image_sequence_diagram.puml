@@ -1,0 +1,33 @@
+@startuml
+
+title "DDB Cover service - Delete image - Sequence diagram"
+
+actor "Library- \n employee" as employee
+boundary "Upload \n interface" as upload
+boundary "Open Platform \n /cover" as OPcover
+boundary "DDB Cover service" as cover
+
+== Log in ==
+
+employee->upload: Log ind.
+employee<--upload: Logged ind.
+
+== Request list of images uploaded by employees at the library ==
+    employee->upload: Request list of images \n the library employees have uploaded.
+        upload->OPcover:  Request list of images \n the library employees have uploaded.
+            OPcover->cover:  Request list of images \n the library employees have uploaded.
+            OPcover<--cover:  Return list of images.
+        upload<--OPcover:  Return list of images.
+    upload-->employee: Display list of images \n the library employees have uploaded.
+
+== Delete image uploaded by employee at the library ==            
+
+    employee->upload: Delete image.
+        upload->OPcover: Delete image and Datawell object.
+            OPcover->cover: Delete image and Datawell object.
+            OPcover<--cover: Message: Image and Datawell object deleted.
+        upload<--OPcover: Message: Image and Datawell object deleted.
+    employee<--upload: Message: Image and Datawell object deleted.
+    employee<--upload: Display list of images without the deleted image.
+
+@enduml

@@ -1,0 +1,34 @@
+@startuml
+
+title "Get cover request - Sequence Diagram"
+
+boundary "DDB CMS" as cms
+boundary "Open Platform /cover" as OPcover
+boundary "DDB Cover service" as cover
+boundary "statistics" as statistics
+boundary "Faktor BI" as factor 
+boundary "Search engine" as search
+database "Reference table" as reference
+database "Cloudinary cover repository" as cloudinary
+
+cms->openplatform: Request cover \n (material identifier \n [Access token].
+openplatform->OPcover: Request cover \n (material identifier \n [Access token].
+OPcover->search: Request cover \n (material identifier.
+search->reference: Request reference id.
+
+alt REFERENCE ID FALSE
+    reference-->search: Return reference id unknown.
+    search-->OPcover: Return reference id unknown.
+    OPcover->statistics: Post date, agency, \n client, material id and URL.
+    statistics->factor: Post date, agency, \n client, material id and URL.
+    OPcover-->openplatform: Return reference id unknown.
+    openplatform-->cms: Return reference id unknown.
+else REFERENCE ID TRUE
+    reference-->search: Return reference id.
+    search->cloudinary: Request cover URL [reference id].
+    cloudinary-->search: Return cover URL.
+    search-->OPcover: Return cover URL.
+    OPcover-->cms: Return cover URL.
+end
+
+@enduml

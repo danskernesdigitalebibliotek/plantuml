@@ -1,0 +1,28 @@
+@startuml
+
+title Aktivitetsdiagram - Log ind
+
+
+start
+
+:Bruger klikker på "Log ind" knappen;
+:DDB CMS omdirigér bruger til Adgangsplatformen;
+if (Vælg Biblioteks log ind?) then (yes)
+    :Option 1 - Log ind med Biblioteks log ind;
+    :Bruger indtaster CPR-nummer og pinkode;
+    :Adgangsplatformen validér bruger via BorCK i FBS;
+    else (no)
+        :Option 2 - Log ind med NemID;
+        :Adgangsplatformen omdirigérer bruger via WAYF til NemID;
+        :Bruger indtaster brugernavn og pinkode;
+        :Bruger indtaster nøglekode;
+        :NemID omdirigérer bruger til Adgangsplatformen;
+endif
+
+:Adgangsplatformen omdirigérer bruger til DDB CMS;
+:DDB CMS viser "Velkommen {username};
+:DDB CMS viser menu for brugerprofil og lånerstatus;
+
+stop
+
+@enduml

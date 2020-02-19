@@ -1,0 +1,19 @@
+@startuml
+
+title - Log ind
+
+:1 Borger: -> (Log ind) : Klik på "Log ind".
+:2 DDB CMS: --> (Log ind) : Omdiriger Borgeren \n til Adgangsplatformen.
+:3 Adgangsplatformen: -> (Log ind) : Faciliter log ind flow.
+
+rectangle "Biblioteks log ind" {
+:A4 Borrower check: --> (Log ind) : Valider borger i FBS.
+:A5 FBS: --> (Log ind) : Autentificer borger.
+}
+
+rectangle "NemID log ind" {
+:B4 WAYF: --> (Log ind) : Omdirigér borger \n til NemID.
+:B5 NemID: --> (Log ind) : Autentificer Borger \n og returner cpr.
+}
+
+@enduml

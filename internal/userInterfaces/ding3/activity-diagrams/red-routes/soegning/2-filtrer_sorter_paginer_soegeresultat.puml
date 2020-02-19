@@ -1,0 +1,51 @@
+@startuml
+
+title Søgefelt med autocomplete og søgeprofil
+
+start
+
+:Vis søgeresultat;
+
+fork
+
+:OPTION Facetbrowser;
+
+IF (Viser facetbrowseren et relevant resultat?) then (ja)
+:Klik på en facet i facetbrowseren;
+ELSE (nej)
+:Afsøg andre tilpasningsmuligheder;
+endif
+
+fork again
+
+:OPTION Sortér;
+
+IF (Viser sortér dropdown en relevant sortéringsmulighed?) then (ja)
+:Klik på en valgmulighed i sortér dropdown;
+ELSE (nej)
+:Afsøg andre tilpasningsmuligheder;
+endif
+
+fork again
+
+:OPTION Paginér;
+
+:Klik på næste side i søgeresultatet;
+
+IF (Viser næste side i søgeresultatet et relevant resultat?) then (ja)
+:Klik på en valgmulighed i sortér dropdown;
+ELSE (nej)
+:Afsøg andre tilpasningsmuligheder;
+endif
+
+end fork
+
+IF (fandt du det du søgte) then (ja)
+    :Klik på det resultat du fandt relevant!;
+ELSE (nej)
+:Foretag en ny søgning;
+endif
+
+stop
+
+@enduml

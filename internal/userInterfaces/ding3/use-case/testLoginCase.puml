@@ -1,0 +1,10 @@
+@startuml
+
+actor (patron)
+actor (ddbcms)
+usecase (login)
+
+(patron) -> (login): Step 1
+(login) -> (ddbcms): Step 2
+
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+
+title - Oprettelse af ny låner 
+
+:1 Borger: -> (Opret brugerprofil) : Klik på "Opret ny lånenr".
+:2 WAYF: --> (Opret brugerprofil) : Omdirigér borger til NemID.
+:3 NemID: --> (Opret brugerprofil) : Autentificer Borger og returner cpr.
+:4 DDB CMS: --> (Opret brugerprofil) : Send CPR til FBS.
+:5 FBS: --> (Opret brugerprofil) : Opret bruger ud fra CPR.
+
+@enduml
