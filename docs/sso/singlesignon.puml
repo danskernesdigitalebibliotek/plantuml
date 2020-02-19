@@ -43,9 +43,13 @@ else Login process
         BORCHK->login.bib.dk: User authenticated
         login.bib.dk->CULR: Get profile for userID@Agency
                                
-            note right: Profile for userID@Agency is created \nif not found with muncipality ID
-           
-        CULR->login.bib.dk: Return GUID and \nactive agencies for userID
+            'note right: Profile with new GUID for userID@Agency \nis created if user not found in CULR. \nMuncipalityNo requested from LMS
+            alt Create user profile if not found in CULR
+                CULR -> LMS: Get user profile
+                CULR <-- LMS: UserID, MunicipalityNo
+                CULR->CULR: Create profile (GUID) for agency with MunicipalityNo
+            end
+        login.bib.dk<--CULR: Return GUID and \nactive agencies for userID
         login.bib.dk->Browser: Set login cookie (User Token)
         login.bib.dk->DDBCMS: Return GUID, session token\nand active agencies for userI
             note right:+ additional info configured (CPR, Local user ID)
