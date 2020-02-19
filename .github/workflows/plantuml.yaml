@@ -3,6 +3,8 @@ on:
     paths:
       - 'docs/*.puml'
       - 'docs/**/*.puml'
+      - 'internal/*.puml'
+      - 'internal/**/*.puml'
 
 name: PlantUML
 jobs:
@@ -37,3 +39,30 @@ jobs:
           pattern: "*.svg"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#
+      - name: Generate images from diagrams
+        uses: docker://miy4/plantuml
+        with:
+          args: "./internal/*.puml -tsvg -charset utf-8"
+      - name: Commit updated diagram images
+        uses: EndBug/add-and-commit@master
+        with:
+          message: Update PlantUML diagram images
+          path: "./internal"
+          pattern: "*.svg"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#
+      - name: Generate images from diagrams - recursive
+        uses: docker://miy4/plantuml
+        with:
+          args: "./internal/**/*.puml -tsvg -charset utf-8"
+      - name: Commit updated diagram images
+        uses: EndBug/add-and-commit@master
+        with:
+          message: Update PlantUML diagram images
+          path: "./internal/**"
+          pattern: "*.svg"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#
