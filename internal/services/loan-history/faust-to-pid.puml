@@ -1,0 +1,34 @@
+@startuml
+title Get PID from FAUST
+caption What types of records are displayed
+'20020-02-20/EBP: Rewrite
+
+' Skinparams '
+skinparam monochrome true
+
+start
+
+:Open Platform /work FAUST ;
+
+if ( Identifier found ) then ( Record found )
+    if (Identifier = \n agency-katalog:faust) then ( YES )
+        if (primaryObjectIdentifier = \n 870970-basis:faust) then ( YES )
+            :Add-on record. \nUse BASIS record;
+        else ( NO )
+            :Local record;
+        endif
+    elseif (Identifier = \n 870970-basis:faust) then ( YES )
+        :BASIS record;
+    elseif (Identifier = \n*-katalog:faust) then ( YES )
+        :External local record;
+    else
+        :External source;
+    endif
+        :Show record;
+else ( No record found )
+        :Record not found. \nNot displayed;
+endif
+
+stop
+
+@enduml
