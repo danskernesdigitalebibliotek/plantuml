@@ -15,7 +15,6 @@ boundary BORCHK /' as "Borrower Check" '/
 boundary CULR
 boundary LMS /'as "Library Management System" '/
 
-
 Patron->Browser: Log in
 Browser->DDBCMS: Log in
 DDBCMS->login.bib.dk: Request authentification of user
