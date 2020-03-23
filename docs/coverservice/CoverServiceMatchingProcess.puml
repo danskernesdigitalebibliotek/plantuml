@@ -1,0 +1,43 @@
+@startuml
+
+title Cover Service matching process - Sequence Diagram
+title How to match local holding and build load file
+skinparam monochrome true
+
+actor User
+entity FBS 
+entity "Open Search" as OpenSearch
+entity "Open Platform" as OP
+entity "MusicBrainz" as MB
+database "Load file (TSV)" as TSV
+
+'actor User
+'boundary "Web GUI" as GUI
+'control "Shopping Cart" as SC
+'database Widgets
+
+group Get holding
+    User -> FBS: Query holding list (Data type)
+    note over User, FBS: ISBN + UPC may not be available
+    User <-- FBS: FAUST, Creator, Title, (ISBN, UPC)
+end
+
+alt Get metadata (Open Platform)
+    User -> OP: Query list: Faust
+    User <-- OP: FAUST, PID, Creator,\nTitle, ISBN (??), UPC (??)
+else Get metadata (Open Search)
+    User -> OpenSearch: Query list: Faust
+    User <-- OpenSearch: FAUST, PID, Creator (100a+h/110a),\nTitle (245a), ISBN (021a+b), UPC (023a)
+end
+
+
+group Get cover URL (Musicbrainz)
+    User -> MB: Query list: Creator, Title, UPC
+    User <-- MB: mbid, Creator, Title, Cover link
+end
+
+
+group Build load file
+    User -> TSV: FAUST, PPID, PID, Vendor, Height, Width, URL
+end
+@enduml
