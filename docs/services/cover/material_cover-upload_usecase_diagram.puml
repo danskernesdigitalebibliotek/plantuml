@@ -17,18 +17,18 @@ rectangle "Upload materialeforside" {
     :medarbejder: --> (1. Log ind)
     (1. Log ind) <-- :login:
    
-    :medarbejder: --> (2. Hent billeder)
-    (3. Godkend opløsning) <-- :cover:
-    (2. Hent billeder) <-- :computer:
-    (3. Godkend opløsning) .> (2. Hent billeder) : extends
-    :medarbejder: --> (4. Indtast pid)
+    :medarbejder: --> (3. Hent billeder)
+    (Godkend opløsning) <-- :cover:
+    (3. Hent billeder) <-- :computer:
+    (Godkend opløsning) .> (3. Hent billeder) : extends
+    :medarbejder: --> (2. Fremsøg materiale \n fx pid eller faust )
     
-    :medarbejder: --> (5. Verificer match)
-    (5. Verificer match) .> (6. Hent metadata) : include
-    (6. Hent metadata) <-- :search:
+    :medarbejder: --> (4. Verificer match)
+    (4. Verificer match) .> (Hent metadata) : include
+    (Hent metadata) <-- :search:
 
-    :medarbejder: --> (7. Upload)
-    (7. Upload) <-- :cover:
+    :medarbejder: --> (5. Upload)
+    (5. Upload) <-- :cover:
 }
 
 @enduml
