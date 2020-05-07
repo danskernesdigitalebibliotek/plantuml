@@ -1,6 +1,6 @@
 @startuml
 
-title "DDB Cover service - Upload - usecase diagram"
+title "DDB Cover service - Upload - Usecase diagram"
 
 left to right direction
 skinparam packageStyle rectangle
