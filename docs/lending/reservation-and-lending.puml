@@ -1,0 +1,43 @@
+@startuml
+Title Reservation og udlånsflow
+
+[*] --> Reservation
+Reservation : Titel på reservationsliste
+
+
+Reservation -> Opfyldes
+Opfyldes : Materialet er tilgængeligt
+Opfyldes -> Afhentning
+Afhentning : Materialet sættes til afhentning
+Afhentning : Reservation sættes til klar på reservationsliste
+
+state Afhentet <<choice>>
+Afhentning --> Afhentet
+
+Afhentet --> Annullering: Ikke afhentet
+Annullering: Reservation fjernes fra reservationsliste
+Annullering -> Beholdning
+Beholdning -> [*]
+
+
+Afhentet --> Udlån : Afhentet < 7 dage
+Udlån: Udlån på udlånsliste
+Udlån: Udlån på lånehistorik
+
+Udlån -> Aflevering
+Aflevering: Udlån af udlånsliste
+Aflevering: Aflevering på lånehistorik
+
+Aflevering -> Beholdning
+
+
+
+
+Reservation -> Annulleres
+Annulleres: Låner annullerer /
+Annulleres: Bibliotek afviser
+Annulleres: Titel fjernes fra reservationsliste
+Annulleres --> [*]
+
+
+@startuml
