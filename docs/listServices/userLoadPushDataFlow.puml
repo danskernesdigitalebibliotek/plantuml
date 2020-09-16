@@ -1,0 +1,28 @@
+@startuml
+title User loan data flow via PUSH
+
+' Removing color and border from cards
+skinparam monochrome true
+
+' Participants
+[FBS]
+[Serviceplatform] as SP
+[Distributor] as DIST
+[DST]
+[Factor]
+[LoanHistory] as LH
+[CMS]
+[APP]
+
+' Data FBS -> Factor
+FBS -> SP: Transactions
+SP -> DST: Transactions
+DST --> Factor: Anonymous\ntransactions
+
+' Data FBS to user
+FBS --> DIST: PUSH transaction
+DIST -> LH: Loan transaction
+LH --> CMS: Individual\nloan history
+LH --> APP: Individual\nloan history
+
+@enduml
