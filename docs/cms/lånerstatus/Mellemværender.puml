@@ -1,7 +1,7 @@
 @startuml
 
 autonumber
-title "Betalingsforløb med NETS"
+title "Betalingsforløb med NETS."
 
 actor Låner as patron
 boundary "DDB CMS" as cms
