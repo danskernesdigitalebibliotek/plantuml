@@ -1,0 +1,44 @@
+@startuml
+
+autonumber
+title "Betalingsforløb med NETS"
+
+actor Låner as patron
+boundary "DDB CMS" as cms
+boundary "FBS" as fbs
+boundary NETS as dibs
+
+patron -> patron: Logger ind.
+note right: Log ind flow behandles i separat sekvensdiagram.
+patron -> cms: Åben mellemværender.
+cms -> fbs: Hent mellemværender.
+fbs --> cms: Send mellemværender.
+cms --> patron: Vis mellemværender.
+patron -> cms: Betal mellemværender.
+cms -> dibs: Redirect låneren til NETS.
+dibs --> patron: Vis formular til indbetaling. 
+patron -> dibs: Indtast kortoplysninger \n og klik på betal knappen.
+
+== ==
+
+dibs -> dibs: Gennemfør 3D Secure for at sikre den videre proces.
+dibs -> dibs: Reservér det betalte beløb.
+dibs --> cms: Send oplysninger om betaling.
+cms -> fbs: Send oplysninger om betaling.
+fbs -> fbs: Opdatér lånerens mellemværender \n efter betalinger \n og udregn nyt restbeløb.
+fbs --> cms: Send betaling OK, \n hvis opdatering gennemføres.
+cms -> dibs: Send anmodning om at beløbet hæves, \n hvis FBS har givet OK.
+dibs -> dibs: Hæv beløbet \n fra lånerens konto.
+dibs --> cms: Send beløb hævet OK.
+
+== ==
+
+dibs --> patron: Vis kvitteringsside med \n transaktionsnummer og ordrenummer.
+patron -> dibs: Luk kvitteringsside.
+note right: Kvittering kan deaktiveres i NETS backend.
+dibs --> cms: Redirect låner til DDB CMS.
+cms -> fbs: Hent opdaterede mellemværender.
+fbs --> cms: Send opdaterede mellemværender.
+cms --> patron: Vis opdatererede mellemværender.
+
+@enduml
