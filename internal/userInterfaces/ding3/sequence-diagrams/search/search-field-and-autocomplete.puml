@@ -1,4 +1,6 @@
 @startuml
+
+autonumber
 title Sequence diagram - Search field and autocomplete
 
     actor "Patron"
