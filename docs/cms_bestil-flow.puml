@@ -1,0 +1,43 @@
+@startuml
+
+start
+
+Title Bestil flow
+
+:Låner åbner visning med materiale der kan bestilles;
+
+if (Har materialet \n lokal beholdning?) then (JA)
+    :Vis \n "Reservér \n knap;
+    stop
+else (NEJ)
+
+    if (Har materialet \n online adgang?) then (JA)
+        :Vis \n "Se online" \n knap;
+        stop
+    else (NEJ)
+        if (Er materialet \n et periodikum?) then (JA)
+            :Vis \n "Bestil i bibliotek.dk" \n knap;
+            stop    
+        else (NEJ)
+            if (Er materialet \n matchet \n med andre materialer?) then (JA)
+                 if (Giver availability tjek \n positivt svar \n på mindst ét \n af de matchede materialer?) then (JA)
+                    :Vis "Bestil \n fra andet bibliotek" \n knap;
+                    stop
+                else (NEJ)
+                    :Vis  \n"Materialet kan ikke bestilles" \n label;
+                    stop
+                endif                
+            else (NEJ)
+                if (Giver availability tjek \n positivt svar?) then (JA)
+                    :Vis \n "Bestil på et andet bibliotek" \n knap;
+                    stop
+                else (Nej)
+                    :Vis \n "Materialet kan ikke bestilles" \n label;
+                    stop
+                endif
+            endif            
+        endif    
+    endif
+endif
+
+@enduml
