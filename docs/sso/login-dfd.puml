@@ -1,9 +1,11 @@
 @startuml
-
-autonumber
-
 title Login DFD - Sequence Diagram
 header After Simon Holt: Login DFD
+caption DDB CMS User authentification (Adgangsplatformen)
+
+' Skinparams '
+skinparam monochrome true
+autonumber
 
 actor "Patron" as USER
 boundary CMS
