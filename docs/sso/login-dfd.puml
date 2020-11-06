@@ -1,0 +1,50 @@
+@startuml
+
+autonumber
+
+title Login DFD - Sequence Diagram
+header After Simon Holt: Login DFD
+
+actor "Patron" as USER
+boundary CMS
+boundary Accessplatform as AP
+'control "Shopping Cart" as SC
+
+database "Session" as SESSION
+database "Drupal" as DRUPAL
+boundary LMS
+'"Library\nManagemt\nSystem" as LMS
+
+group Basic login
+
+USER -> CMS: Login
+CMS -> AP: Elevated Client Id + Agency
+AP -> USER: Login
+AP <-- USER: id + pin
+CMS <-- AP: Authorization code
+
+CMS -> AP: Authorization code + Client Id and Client Secret
+CMS <-- AP: Access token
+
+
+CMS -> AP: Normal Client Id and Client Secret, userid + pin, Agency
+CMS <-- AP: User access token
+
+CMS -> SESSION: User access token
+
+end
+'newpage Get Patron Data
+
+group Get Patron Data from LMS
+
+CMS -> LMS: Userid + pin, Agency
+CMS <-- LMS: LMS Patron Data
+
+CMS -> SESSION: Userid, LMS Patron Data
+
+CMS -> DRUPAL: Userid (hashed), LMS Patron Data (Name, email, blockings)
+
+
+end
+
+@enduml
