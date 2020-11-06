@@ -2,7 +2,7 @@
 
 ## Diagrams
 - [Single Sign-on](#single-sign-on)
-   - [Login DFD](#login-ddf)
+   - [Login DFD](#login-dfd)
 
 - [Single Sign-out](#single-sign-out)
 - [Fallback for creating users in CULR](#fallback-for-creating-users-in-culr)
