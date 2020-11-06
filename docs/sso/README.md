@@ -11,13 +11,13 @@
 ![User authentification](http://www.plantuml.com/plantuml/proxy?src=https://danskernesdigitalebibliotek.github.io/plantuml/sso/singlesignon.puml)
 
 #### Login DFD
+![Login DFD (Svg)](https://danskernesdigitalebibliotek.github.io/plantuml/login-dfd.svg)
+
+<!--
 Generated:
-
 ![Login DFD](http://www.plantuml.com/plantuml/proxy?src=https://danskernesdigitalebibliotek.github.io/plantuml/sso/login-dfd.puml)
-
-
 [Login DFD (Svg)](https://danskernesdigitalebibliotek.github.io/plantuml/login-dfd.svg)
-
+-->
 
 ### Single Sign-out
 ![Single Sign-out](http://www.plantuml.com/plantuml/proxy?src=https://danskernesdigitalebibliotek.github.io/plantuml/sso/singlesignout.txt)
