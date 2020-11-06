@@ -3,7 +3,7 @@ title Create patron DFD - Sequence Diagram
 header After Simon Holt: Brugeroprettelse DFD
 caption DDB CMS create patron (Adgangsplatformen)
 
-' Skinparams '
+' Skinparams
 skinparam monochrome true
 autonumber
 
