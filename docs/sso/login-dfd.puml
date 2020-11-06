@@ -10,43 +10,52 @@ autonumber
 actor "Patron" as USER
 boundary CMS
 boundary Accessplatform as AP
+boundary NemId as NEMID
 'control "Shopping Cart" as SC
-
 database "Session" as SESSION
 database "Drupal" as DRUPAL
 boundary LMS
 '"Library\nManagemt\nSystem" as LMS
 
+
 group Basic login
 
-USER -> CMS: Login
-CMS -> AP: Elevated Client Id + Agency
-AP -> USER: Login
-AP <-- USER: id + pin
-CMS <-- AP: Authorization code
-
-CMS -> AP: Authorization code + Client Id and Client Secret
-CMS <-- AP: Access token
-
-
-CMS -> AP: Normal Client Id and Client Secret, userid + pin, Agency
-CMS <-- AP: User access token
-
-CMS -> SESSION: User access token
-
+    USER -> CMS: Login
+    CMS -> AP: Elevated Client Id + Agency
+    
+    alt NemId login
+        AP -> NEMID:
+        NEMID -> USER: Login
+        NEMID <-- USER: NemId id + key
+        AP <-- NEMID: CPR
+        CMS <-- AP: Authorization code
+        CMS -> AP:  Authorization code + Client Id and Client Secret
+        CMS <-- AP: Access token
+        note left 
+            Normal User token not retrieved!
+        end note
+    else Library login
+        AP -> USER: Login
+        AP  <-- USER: id + pin
+        CMS <-- AP: Authorization code
+        CMS -> AP:  Authorization code + Client Id and Client Secret
+        CMS <-- AP: Access token
+        CMS -> AP:  Normal Client Id and Client Secret, userid + pin, Agency
+        CMS <-- AP: User access token
+        CMS -> SESSION: User access token
+    
+    end
 end
-'newpage Get Patron Data
 
 group Get Patron Data from LMS
-
-CMS -> LMS: Userid + pin, Agency
-CMS <-- LMS: LMS Patron Data
-
-CMS -> SESSION: Userid, LMS Patron Data
-
-CMS -> DRUPAL: Userid (hashed), LMS Patron Data (Name, email, blockings)
-
-
+    alt UserId = CPR
+        CMS -> LMS: (Preauth) CPR, Agency
+    else
+        CMS -> LMS: UserId + **~~pin~~**, Agency
+    end
+    CMS <-- LMS: LMS Patron Data
+    CMS -> SESSION: Userid, LMS Patron Data
+    CMS -> DRUPAL: Userid (hashed), LMS Patron Data (Name, email, blockings)
 end
 
 @enduml
