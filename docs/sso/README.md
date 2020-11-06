@@ -2,6 +2,7 @@
 
 ## Diagrams
 - [Single Sign-on](#single-sign-on)
+   - [Create patron DFD](#create-patron-dfd)
    - [Login DFD](#login-dfd)
 
 - [Single Sign-out](#single-sign-out)
@@ -10,6 +11,8 @@
 ### Single Sign-on
 ![User authentification](http://www.plantuml.com/plantuml/proxy?src=https://danskernesdigitalebibliotek.github.io/plantuml/sso/singlesignon.puml)
 
+#### Create patron DFD
+![Create Patron DFD (Svg)](https://danskernesdigitalebibliotek.github.io/plantuml/create-patron-dfd.svg)
 #### Login DFD
 ![Login DFD (Svg)](https://danskernesdigitalebibliotek.github.io/plantuml/login-dfd.svg)
 
