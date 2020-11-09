@@ -3,7 +3,7 @@ title Create patron DFD - Sequence Diagram
 header After Simon Holt: Brugeroprettelse DFD
 caption DDB CMS create patron (Adgangsplatformen)
 
-' Skinparams
+' Skinparams '
 skinparam monochrome true
 autonumber
 
@@ -20,6 +20,7 @@ boundary LMS
 
 
 group Basic login
+
     USER -> CMS: Create patron account
     CMS -> AP: Elevated Client Id + Agency
     AP -> NEMID: Identify
@@ -29,11 +30,15 @@ group Basic login
     CMS <-- AP: Authorization code
 end
 
+
     CMS -> USER: Mandatory: Name, email, pickup library, Pin (x digits)
     note right
         Name should be delivered by the Serviceplatform!
     end note
     CMS <-- USER: Name, email, pickup library, Pin (x digits)
+    note right
+        No of digits in PIN is variable. Standard: 4 (Aakb: 5)
+    end note
 
 group Create Patron in LMS
     CMS -> LMS: CPR, Name, email, pickup library, Pin (x digits)
