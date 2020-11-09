@@ -21,17 +21,18 @@ boundary LMS
 
 group Basic login
 
-    USER -> CMS: Create patron account
-    CMS -> AP: Elevated Client Id + Agency
-    AP -> NEMID: Identify
+    USER -> CMS: Create patron account\n(https:xx.ddbcms.dk/registration/)
+    'CMS -> AP: Elevated Client Id + Agency\n(https://xx.ddbcms.dk/adgangsplatformen/login?destination=registration/acceptance&idp=nemlogin)
+    'AP -> NEMID: Identify
+    CMS -> NEMID: Identify\n(https://xx.ddbcms.dk/adgangsplatformen/login?destination=registration/acceptance&idp=nemlogin)
+
     NEMID -> USER: Login
     NEMID <-- USER: NemId id + key
-    AP <-- NEMID: CPR (Muncipality ID?)
-    CMS <-- AP: Authorization code
+    CMS <-- NEMID: CPR (Muncipality ID?)
 end
 
 
-    CMS -> USER: Mandatory: Name, email, pickup library, Pin (x digits)
+    CMS -> USER: Mandatory: Name, email, pickup library, Pin (x digits)\n(https:xx.ddbcms.dk/registration/accep)
     note right
         Name, email (NemMail), SMS (NemSms), muncipality ID should be delivered by the Serviceplatform!
     end note
