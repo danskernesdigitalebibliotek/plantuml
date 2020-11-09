@@ -26,14 +26,14 @@ group Basic login
     AP -> NEMID: Identify
     NEMID -> USER: Login
     NEMID <-- USER: NemId id + key
-    AP <-- NEMID: CPR
+    AP <-- NEMID: CPR (Muncipality ID?)
     CMS <-- AP: Authorization code
 end
 
 
     CMS -> USER: Mandatory: Name, email, pickup library, Pin (x digits)
     note right
-        Name should be delivered by the Serviceplatform!
+        Name, email (NemMail), SMS (NemSms), muncipality ID should be delivered by the Serviceplatform!
     end note
     CMS <-- USER: Name, email, pickup library, Pin (x digits)
     note right
