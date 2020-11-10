@@ -50,7 +50,7 @@ end
 group Get Patron Data from LMS
     alt UserId = CPR
         CMS -> LMS: (Preauth) CPR, Agency
-    else
+    else No CPR
         CMS -> LMS: UserId + **~~pin~~**, Agency
     end
     CMS <-- LMS: LMS Patron Data
