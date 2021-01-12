@@ -1,0 +1,24 @@
+@startuml
+
+title Issue 4673 Non-resident patron in Proxy
+'https://platform.dandigbib.org/issues/4673
+
+CMS -> Proxy: Login
+Proxy -> CULR: Resident patron?
+alt Yes resident patron
+    Proxy <-- CULR: Login
+    CMS <-- Proxy: Login
+else
+    CULR -> FBS: Resident patron?
+    alt Yes resident FBS patron
+        CULR <- FBS: Resident patron
+        Proxy <-- CULR: Login
+    CMS <-- Proxy: Login
+    else No - Not resident patron
+        CULR <- FBS: Not resident patron
+        Proxy <-- CULR: Not resident patron
+        'Ask patron for redirect to home agency\n(Using CURL agency list and resident code)
+        CMS <-- Proxy: Ask patron for redirect to home agency\n(Using CURL agency list and resident code)
+    end
+end
+@enduml
