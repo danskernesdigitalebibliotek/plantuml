@@ -8,6 +8,7 @@ skinparam component {
 
 
     package "Den Åbne Platform" {
+    together {
       [Cms]
       [Search]
       [Libraries]
@@ -16,5 +17,5 @@ skinparam component {
       [Suggester]
       [Itemholdings]
     }
-    
+    }
 @enduml
