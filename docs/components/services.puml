@@ -1,0 +1,62 @@
+@startuml
+'header SayHello
+'footer Page %page% of %lastpage%
+
+skinparam component {
+    backgroundColor [Biblio] LightGray
+}
+
+
+    package "Services" {
+        package "Søgning" {
+          [Open Search]
+          [Universal Search]
+          [Open Suggestion]
+          [More Info]
+          [Open Suggestion]
+          [VoxB] #LightGray
+          [Open List]
+          [Reccomend]
+          [Brugerspor] #LightGray
+          [Open Spell]
+          [Rank]
+          [Infomedia]
+          [Linkresolver] #Lightgray
+        }
+        package "Adgang - digitalt" {
+            [Adgangsplatformen]
+            [Borrower Check]
+            [Proxy]
+            [NAL]
+        }
+        package "Adgang - fysisk" {
+          [Open Holding Status]
+          [Open Find Order]
+          [Open Order]
+        }
+        package "Opdatering" {
+          [Open Cataloguing Build]
+          [Open Cataloguing Update]
+          [Open Cataloguing Validate]
+          [WorldCat Sync]
+          [OAI harvest]
+          [BPI prod]
+          [Viden DB]
+          [VIP opdatering]
+          [FBS sync]
+        }
+        package "Andre" {
+          [SRU Z39.50]
+          [NCIP]
+          [Open Agency VIP]
+          [Open Format]
+          [FBS Service]
+          [NAR]
+          [Open User Status]
+          [ILS integration TING]
+          [BIBI]
+          [Open Price Check]
+        }
+    }
+
+@enduml
