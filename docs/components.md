@@ -1,5 +1,8 @@
 
 
 ## Material List flow
-![Single Sign-out](clients.svg)
+![Clients](clients.svg)
+![OpenPlatform](OpenPlatform.svg)
+![Services](Services.svg)
+![Dataplatforms](dataplatforms.svg)
 
