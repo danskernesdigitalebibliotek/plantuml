@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="389px" preserveAspectRatio="none" style="width:1060px;height:389px;" version="1.1" viewBox="0 0 1060 389" width="1060px" zoomAndPan="magnify"><defs><filter height="300%" id="fs0jewytyyvvf" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[47837c389a65c6f7744d146a2d14cc2d]
+cluster Dataplatforme--><polygon fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" points="16,6,142,6,149,28.2969,1043,28.2969,1043,382,16,382,16,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="149" y1="28.2969" y2="28.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="120" x="20" y="20.9951">Dataplatforme</text><!--MD5=[b79de33c563505c1c7ac4d1950f3e6d3]
+cluster Metadata--><polygon fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" points="452,49,537,49,544,71.2969,1019,71.2969,1019,358,452,358,452,49" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="452" x2="544" y1="71.2969" y2="71.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="79" x="456" y="63.9951">Metadata</text><!--MD5=[bffbdd91c704e50e7c250218ea3adc36]
+cluster Administrative data--><polygon fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" points="40,49,210,49,217,71.2969,428,71.2969,428,358,40,358,40,49" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="40" x2="217" y1="71.2969" y2="71.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="164" x="44" y="63.9951">Administrative data</text><!--MD5=[abe68c382e5bb52d56640fd77a9c1d39]
+entity Databrønd--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="117" x="468.5" y="84"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="565.5" y="89"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="563.5" y="91"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="563.5" y="95"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="483.5" y="116.9951">Databrønd</text><!--MD5=[0557897cd6ff2dd71607ca2e8802a4b0]
+entity Viden DB--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="106" x="621" y="84"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="707" y="89"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="705" y="91"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="705" y="95"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="636" y="116.9951">Viden DB</text><!--MD5=[3a82623d8e418fe90e2005599700ec94]
+entity Forsider--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="98" x="762" y="84"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="840" y="89"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="838" y="91"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="838" y="95"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="777" y="116.9951">Forsider</text><!--MD5=[daa4123d9e68a7f0d9fc1ec96b1c830e]
+entity WorldCat--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="107" x="895.5" y="84"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="982.5" y="89"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="980.5" y="91"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="980.5" y="95"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="910.5" y="116.9951">WorldCat</text><!--MD5=[ca16b2d0662a0a0b923406b1b34c8b8c]
+entity FFU Databrønde--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="155" x="468.5" y="190"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="603.5" y="195"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="601.5" y="197"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="601.5" y="201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="483.5" y="222.9951">FFU Databrønde</text><!--MD5=[d3f59cbdf861d0cb1bc5f16479a92514]
+entity OpenList--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="105" x="658.5" y="190"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="743.5" y="195"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="741.5" y="197"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="741.5" y="201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="673.5" y="222.9951">OpenList</text><!--MD5=[e8aa59e270592395d3b1f4473ea748ee]
+entity ADHL--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="79" x="798.5" y="190"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="857.5" y="195"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="855.5" y="197"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="855.5" y="201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="813.5" y="222.9951">ADHL</text><!--MD5=[cea6d8e1e3e67402d3756f9e6c8048b9]
+entity VoxB--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="77" x="912.5" y="190"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="969.5" y="195"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="967.5" y="197"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="967.5" y="201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="927.5" y="222.9951">VoxB</text><!--MD5=[a460401870f77ef6cfbd293349ee86b5]
+entity BPI (Inlead)--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="120" x="486" y="296"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="586" y="301"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="584" y="303"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="584" y="307"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="501" y="328.9951">BPI (Inlead)</text><!--MD5=[d8cb6089967d7bf98f44dfbba9916442]
+entity Personalisering--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="149" x="641.5" y="296"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="770.5" y="301"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="768.5" y="303"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="768.5" y="307"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="656.5" y="328.9951">Personalisering</text><!--MD5=[9da9aee0f371dee15d5caf821ba64dab]
+entity BOB--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="71" x="56.5" y="84"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="107.5" y="89"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="105.5" y="91"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="105.5" y="95"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="71.5" y="116.9951">BOB</text><!--MD5=[056193c3e257453c6c500cf67a7dc501]
+entity ERMS--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="80" x="163" y="84"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="223" y="89"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="221" y="91"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="221" y="95"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="178" y="116.9951">ERMS</text><!--MD5=[de3509ca76270e81ce336e60092e45fd]
+entity FFU ILS--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="90" x="278" y="84"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="348" y="89"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="346" y="91"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="346" y="95"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="293" y="116.9951">FFU ILS</text><!--MD5=[5cbc873ada4f5b2ad2cc91b88eef47e9]
+entity FBS--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="67" x="56.5" y="190"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="103.5" y="195"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="101.5" y="197"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="101.5" y="201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="71.5" y="222.9951">FBS</text><!--MD5=[abf762d4e9bb8645df830cbcd03e5f87]
+entity CULR--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="77" x="158.5" y="190"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="215.5" y="195"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="213.5" y="197"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="213.5" y="201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="173.5" y="222.9951">CULR</text><!--MD5=[d57c69bf8748530baf0cec4915318c8c]
+entity KPI/Webtrekk--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="141" x="270.5" y="190"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="391.5" y="195"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="389.5" y="197"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="389.5" y="201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="285.5" y="222.9951">KPI/Webtrekk</text><!--MD5=[28ece4773fc78e11f4a0f4f0110a9d93]
+entity VIP--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="63" x="58.5" y="296"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="101.5" y="301"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="99.5" y="303"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="99.5" y="307"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="73.5" y="328.9951">VIP</text><!--MD5=[3322d1096093e82180f065817ee13a95]
+entity SAOU--><rect fill="#FFFFFF" filter="url(#fs0jewytyyvvf)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="79" x="156.5" y="296"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="215.5" y="301"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="213.5" y="303"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="213.5" y="307"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="171.5" y="328.9951">SAOU</text><!--MD5=[12582f498f005c08d1d7ed45ccb119f0]
+link Databrønd to Viden DB--><!--MD5=[bbd0e08a29e6110c9ec513c3f5ca9590]
+link Viden DB to Forsider--><!--MD5=[6bb326a8f36bae2ac7e18f5bdddac25e]
+link Forsider to WorldCat--><!--MD5=[7e97b01558187fe3963a5d9f0b302fa3]
+link Databrønd to FFU Databrønde--><!--MD5=[e5674bcf741b05c5af695658ab85f5d7]
+link FFU Databrønde to OpenList--><!--MD5=[9b2ba2984d448fce55dab15cbb602d2e]
+link OpenList to ADHL--><!--MD5=[fcf37a053b1472f6d799123976eee6fd]
+link ADHL to VoxB--><!--MD5=[e61f2baf7b6f74556c7af61e6b035036]
+link FFU Databrønde to BPI (Inlead)--><!--MD5=[c8f52311e13707eb6329ec7bc0652323]
+link BPI (Inlead) to Personalisering--><!--MD5=[6b607f07e6736fee1def34d7e17056a0]
+link BOB to ERMS--><!--MD5=[7d14bad904fb3d210dde6573056fa0ca]
+link ERMS to FFU ILS--><!--MD5=[dff8faa91bbf51ee9a64270e37dbd451]
+link BOB to FBS--><!--MD5=[3aab9c8a331538534965b8122c4856db]
+link FBS to CULR--><!--MD5=[d29882de4f1b1583addff966d653d4de]
+link CULR to KPI/Webtrekk--><!--MD5=[f5d20c8639dc32e3430ec6bcab52ec00]
+link FBS to VIP--><!--MD5=[ba31c00c29335a547d7490324b0256b9]
+link VIP to SAOU--><!--MD5=[235d8a4bd3ca51d69fee9c84cdbd5da3]
+@startuml
+'header SayHello
+'footer Page %page% of %lastpage%
+
+skinparam component {
+    backgroundColor [Biblio] LightGray
+}
+
+package "Dataplatforme" {
+
+    package "Metadata" {
+        [Databrønd]
+        [Viden DB]
+        [Forsider]
+        [WorldCat]
+        [FFU Databrønde]
+        [OpenList]
+        [ADHL]
+        [VoxB]
+        [BPI (Inlead)]
+        [Personalisering]
+    }
+    
+    package "Administrative data" {
+        [BOB]
+        [ERMS]
+        [FFU ILS]
+        [FBS]
+        [CULR]
+        [KPI/Webtrekk]
+        [VIP]
+        [SAOU]
+    }
+}
+@enduml
+
+@startuml
+
+skinparam component {
+    backgroundColor [Biblio] LightGray
+}
+
+package "Dataplatforme" {
+
+    package "Metadata" {
+        [Databrønd]
+        [Viden DB]
+        [Forsider]
+        [WorldCat]
+        [FFU Databrønde]
+        [OpenList]
+        [ADHL]
+        [VoxB]
+        [BPI (Inlead)]
+        [Personalisering]
+    }
+    
+    package "Administrative data" {
+        [BOB]
+        [ERMS]
+        [FFU ILS]
+        [FBS]
+        [CULR]
+        [KPI/Webtrekk]
+        [VIP]
+        [SAOU]
+    }
+}
+@enduml
+
+PlantUML version 1.2021.01beta3(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
