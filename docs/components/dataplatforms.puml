@@ -1,0 +1,36 @@
+@startuml
+'header SayHello
+'footer Page %page% of %lastpage%
+
+skinparam component {
+    backgroundColor [Biblio] LightGray
+}
+
+package "Dataplatforme" {
+
+    package "Metadata" {
+        [Databrønd]
+        [Viden DB]
+        [Forsider]
+        [WorldCat]
+        [FFU Databrønde]
+        [OpenList]
+        [ADHL]
+        [VoxB]
+        [BPI (Inlead)]
+        [Personalisering]
+    }
+    
+    package "Administrative data" {
+        [BOB]
+        [ERMS]
+        [FFU ILS]
+        [FBS]
+        [CULR]
+        [KPI/Webtrekk]
+        [VIP]
+        [SAOU]
+    }
+}
+
+@enduml
