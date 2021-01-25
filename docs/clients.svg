@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="543px" preserveAspectRatio="none" style="width:1530px;height:543px;" version="1.1" viewBox="0 0 1530 543" width="1530px" zoomAndPan="magnify"><defs><filter height="300%" id="f130de1ft64nl9" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[9d843c26526b301dbbb1b4d6307932c2]
+cluster Klienter/brugergrænseflader--><polygon fill="#FFFFFF" filter="url(#f130de1ft64nl9)" points="16,6,251,6,258,28.2969,1513,28.2969,1513,536,16,536,16,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="258" y1="28.2969" y2="28.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="229" x="20" y="20.9951">Klienter/brugergrænseflader</text><!--MD5=[bc3975d7480823f034c0a61d5f1d9fcc]
+cluster Borgere--><polygon fill="#FFFFFF" filter="url(#f130de1ft64nl9)" points="640,73,709,73,716,95.2969,1465,95.2969,1465,488,640,488,640,73" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="640" x2="716" y1="95.2969" y2="95.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="63" x="644" y="87.9951">Borgere</text><!--MD5=[4f67495f3dd5c46c6f9a08b3432ff9ad]
+cluster Personale--><polygon fill="#FFFFFF" filter="url(#f130de1ft64nl9)" points="64,73,149,73,156,95.2969,616,95.2969,616,382,64,382,64,73" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="64" x2="156" y1="95.2969" y2="95.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="79" x="68" y="87.9951">Personale</text><!--MD5=[e44d65e4c58fdb9888e645f9fe8cc7c6]
+entity Bibliotek.dk--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="129" x="656.5" y="108"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="765.5" y="113"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="763.5" y="115"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="763.5" y="119"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="671.5" y="140.9951">Bibliotek.dk</text><!--MD5=[2a3e8c58f340568de8eeda940e9c688b]
+entity Biblio--><rect fill="#D3D3D3" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="81" x="820.5" y="108"/><rect fill="#D3D3D3" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="881.5" y="113"/><rect fill="#D3D3D3" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="879.5" y="115"/><rect fill="#D3D3D3" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="879.5" y="119"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="835.5" y="140.9951">Biblio</text><!--MD5=[78ee6c7003767fae358e6c21f09ecc9d]
+entity Bibzoom--><rect fill="#D3D3D3" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="104" x="937" y="108"/><rect fill="#D3D3D3" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1021" y="113"/><rect fill="#D3D3D3" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1019" y="115"/><rect fill="#D3D3D3" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1019" y="119"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="952" y="140.9951">Bibzoom</text><!--MD5=[eefc4e13abc5ddfc2c1de58e9098c804]
+entity FFU portaler--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="128" x="1076" y="108"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1184" y="113"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1182" y="115"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1182" y="119"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="1091" y="140.9951">FFU portaler</text><!--MD5=[68c139d2312693534ec9e6200615cbe5]
+entity Brugerportalsinitiativet--><rect fill="#D3D3D3" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="210" x="1239" y="108"/><rect fill="#D3D3D3" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1429" y="113"/><rect fill="#D3D3D3" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1427" y="115"/><rect fill="#D3D3D3" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1427" y="119"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="170" x="1254" y="140.9951">Brugerportalsinitiativet</text><!--MD5=[28cbc2765b07f306c04c0840858e192a]
+entity DDB CMS--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="107" x="671.5" y="214"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="758.5" y="219"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="756.5" y="221"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="756.5" y="225"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="686.5" y="246.9951">DDB CMS</text><!--MD5=[22a45018954c8697fa264ee14cfe18aa]
+entity Filmstriben--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="122" x="814" y="214"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="916" y="219"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="914" y="221"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="914" y="225"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="829" y="246.9951">Filmstriben</text><!--MD5=[801b502ff88120dd0064499e74a49102]
+entity FBS Skoleportl--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="147" x="971.5" y="214"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1098.5" y="219"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1096.5" y="221"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1096.5" y="225"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="986.5" y="246.9951">FBS Skoleportl</text><!--MD5=[b511d9daf85acea7d0bb1b17da839b1c]
+entity eReolen--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="99" x="1153.5" y="214"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1232.5" y="219"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1230.5" y="221"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1230.5" y="225"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="1168.5" y="246.9951">eReolen</text><!--MD5=[0b8b8e6af2ad42b2daedde045e0710c2]
+entity Arthesis--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="99" x="1287.5" y="214"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1366.5" y="219"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1364.5" y="221"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1364.5" y="225"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="1302.5" y="246.9951">Arthesis</text><!--MD5=[5734191751c1d1eac6d4c8e2e0563597]
+entity Faktorlink--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="113" x="676.5" y="320"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="769.5" y="325"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="767.5" y="327"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="767.5" y="331"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="691.5" y="352.9951">Faktorlink</text><!--MD5=[fd327f06b6362879202147096f0c1572]
+entity Forfatterweb--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="136" x="825" y="320"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="941" y="325"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="939" y="327"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="939" y="331"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="840" y="352.9951">Forfatterweb</text><!--MD5=[f521679caa45bca48d751d6759de1c2d]
+entity Litteratursiden--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="148" x="996" y="320"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1124" y="325"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1122" y="327"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1122" y="331"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="1011" y="352.9951">Litteratursiden</text><!--MD5=[1a332c5a9ad9f7cbf8368795e50c729b]
+entity Filmcentralen--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="139" x="1179.5" y="320"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1298.5" y="325"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1296.5" y="327"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1296.5" y="331"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="1194.5" y="352.9951">Filmcentralen</text><!--MD5=[b918838f396ddfc3ffbd203ee512d85f]
+entity Nota--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="74" x="1354" y="320"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1408" y="325"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1406" y="327"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1406" y="331"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="1369" y="352.9951">Nota</text><!--MD5=[05770ec73428e604759643c33518b072]
+entity Biblioteksvagten--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="163" x="656.5" y="426"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="799.5" y="431"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="797.5" y="433"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="797.5" y="437"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="671.5" y="458.9951">Biblioteksvagten</text><!--MD5=[a5d252ae73789dc8fba9cfd4446d1943]
+entity Borger.dk--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="112" x="855" y="426"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="947" y="431"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="945" y="433"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="945" y="437"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="870" y="458.9951">Borger.dk</text><!--MD5=[02204e9c34387899462352c02a9dd8c1]
+entity Finurlige Fakta--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="145" x="1002.5" y="426"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1127.5" y="431"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1125.5" y="433"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1125.5" y="437"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="1017.5" y="458.9951">Finurlige Fakta</text><!--MD5=[da8da623f1686ccc62d552ae0de523f9]
+entity Biblioteket App--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="156" x="1183" y="426"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="1319" y="431"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1317" y="433"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="1317" y="437"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="1198" y="458.9951">Biblioteket App</text><!--MD5=[056193c3e257453c6c500cf67a7dc501]
+entity ERMS--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="80" x="122" y="108"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="182" y="113"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="180" y="115"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="180" y="119"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="137" y="140.9951">ERMS</text><!--MD5=[bd496dbcd62e556f213b4234d8f7f0e7]
+entity FAKTOR--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="98" x="237" y="108"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="315" y="113"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="313" y="115"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="313" y="119"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="252" y="140.9951">FAKTOR</text><!--MD5=[cff0be147449b997be319b702c5a47cd]
+entity FFU CMS--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="100" x="370" y="108"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="450" y="113"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="448" y="115"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="448" y="119"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="385" y="140.9951">FFU CMS</text><!--MD5=[28ece4773fc78e11f4a0f4f0110a9d93]
+entity VIP--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="63" x="130.5" y="214"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="173.5" y="219"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="171.5" y="221"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="171.5" y="225"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="145.5" y="246.9951">VIP</text><!--MD5=[386db8b69abeaf4220fff13c5684bff3]
+entity Netpunkt--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="109" x="228.5" y="214"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="317.5" y="219"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="315.5" y="221"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="315.5" y="225"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="243.5" y="246.9951">Netpunkt</text><!--MD5=[c88e65a0f892c31524c9bc6fd9ce900f]
+entity Bob--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="69" x="372.5" y="214"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="421.5" y="219"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="419.5" y="221"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="419.5" y="225"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="387.5" y="246.9951">Bob</text><!--MD5=[1984d694f4896102a9bc7f893dfd6901]
+entity OpenSource DBC--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="163" x="80.5" y="320"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="223.5" y="325"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="221.5" y="327"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="221.5" y="331"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="95.5" y="352.9951">OpenSource DBC</text><!--MD5=[bbd6c828ca20e6237ac53aad464a4a9a]
+entity Open Cataloguing--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="168" x="279" y="320"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="427" y="325"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="425" y="327"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="425" y="331"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="294" y="352.9951">Open Cataloguing</text><!--MD5=[612df78c4a30043ac411e6959b1b5ee6]
+entity FBS Admin--><rect fill="#FFFFFF" filter="url(#f130de1ft64nl9)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="117" x="482.5" y="320"/><rect fill="#FFFFFF" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="579.5" y="325"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="577.5" y="327"/><rect fill="#FFFFFF" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="577.5" y="331"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="497.5" y="352.9951">FBS Admin</text><!--MD5=[9e530ab5cee7e2c5001e78be844ecdff]
+link Bibliotek.dk to Biblio--><!--MD5=[4addad4d4fca08b335f9d1da0e04c6d2]
+link Biblio to Bibzoom--><!--MD5=[ddb832846dd88c813abd048cb423ad0a]
+link Bibzoom to FFU portaler--><!--MD5=[52ec85e093bef3ecedcadb7bbe0bcecc]
+link FFU portaler to Brugerportalsinitiativet--><!--MD5=[948cc12fab3fcf928aa32fd4891c6662]
+link Bibliotek.dk to DDB CMS--><!--MD5=[edf55d2ed10373f05d2cb3c89cd70e7c]
+link DDB CMS to Filmstriben--><!--MD5=[6c3b11dcecbf71b46806f7b8d41aba70]
+link Filmstriben to FBS Skoleportl--><!--MD5=[10d99389a4442a9e087efb39d4e93043]
+link FBS Skoleportl to eReolen--><!--MD5=[e5e5d00462bc91386db77147de3557bf]
+link eReolen to Arthesis--><!--MD5=[e79acf0cb1bc75f220411f9dc6fc5fb7]
+link DDB CMS to Faktorlink--><!--MD5=[4760960abc83e7e64fbc10f3a7c048c6]
+link Faktorlink to Forfatterweb--><!--MD5=[ab18aa088a0fc96e067a9fb60eab861e]
+link Forfatterweb to Litteratursiden--><!--MD5=[ae580a9e2fe66bb2a04b0de59adae51b]
+link Litteratursiden to Filmcentralen--><!--MD5=[fa1f66d2e8c4fda93d217f5f75133170]
+link Filmcentralen to Nota--><!--MD5=[e458ba028cd3e4907dad5bf54f07c9a1]
+link Faktorlink to Biblioteksvagten--><!--MD5=[5ffe5858f76733e108463385def206eb]
+link Biblioteksvagten to Borger.dk--><!--MD5=[fb2f6d61326d271f4a0f11030dc709a4]
+link Borger.dk to Finurlige Fakta--><!--MD5=[074eabcd051a3ed815b38ca32cead568]
+link Finurlige Fakta to Biblioteket App--><!--MD5=[6c7ffb50f4b66ee40d825812522f8407]
+link ERMS to FAKTOR--><!--MD5=[92e863fcec2262c04cef66fc4c3c6f20]
+link FAKTOR to FFU CMS--><!--MD5=[23a4c110a828a2cf0dd39170e46d7bb9]
+link ERMS to VIP--><!--MD5=[ffc78398661096b756544c7a4a77a42d]
+link VIP to Netpunkt--><!--MD5=[7020595b340d0078fc1f4de2525a034d]
+link Netpunkt to Bob--><!--MD5=[bdebdf094f539945a7c04fd7d4fa813b]
+link VIP to OpenSource DBC--><!--MD5=[3942934b840ef5a5a669238db690a7e9]
+link OpenSource DBC to Open Cataloguing--><!--MD5=[2fdeec09866ecf167c1277a549a4ab53]
+link Open Cataloguing to FBS Admin--><!--MD5=[e4970f2126b369c05d0f021441d32618]
+@startuml
+'header SayHello
+'footer Page %page% of %lastpage%
+
+skinparam component {
+    backgroundColor [Biblio] LightGray
+}
+
+
+package "Klienter/brugergrænseflader" {
+ together {
+    package "Borgere" {
+      [Bibliotek.dk]
+      [Biblio] #LightGray
+      [Bibzoom] #LightGray
+      [FFU portaler]
+      [Brugerportalsinitiativet] #LightGray
+      [DDB CMS]
+      [Filmstriben]
+      [FBS Skoleportl]
+      [eReolen]
+      [Arthesis]
+      [Faktorlink]
+      [Forfatterweb]
+      [Litteratursiden]
+      [Filmcentralen]
+      [Nota]
+      [Biblioteksvagten]
+      [Borger.dk]
+      [Finurlige Fakta]
+      [Biblioteket App]
+    }
+    
+    package "Personale" {
+      [ERMS]
+      [FAKTOR]
+      [Biblioteksvagten]
+      [FFU CMS]
+      [VIP]
+      [Netpunkt]
+      [Bob]
+      [OpenSource DBC]
+      [Open Cataloguing]
+      [FBS Admin]
+    }
+}
+}
+@enduml
+
+@startuml
+
+skinparam component {
+    backgroundColor [Biblio] LightGray
+}
+
+
+package "Klienter/brugergrænseflader" {
+ together {
+    package "Borgere" {
+      [Bibliotek.dk]
+      [Biblio] #LightGray
+      [Bibzoom] #LightGray
+      [FFU portaler]
+      [Brugerportalsinitiativet] #LightGray
+      [DDB CMS]
+      [Filmstriben]
+      [FBS Skoleportl]
+      [eReolen]
+      [Arthesis]
+      [Faktorlink]
+      [Forfatterweb]
+      [Litteratursiden]
+      [Filmcentralen]
+      [Nota]
+      [Biblioteksvagten]
+      [Borger.dk]
+      [Finurlige Fakta]
+      [Biblioteket App]
+    }
+    
+    package "Personale" {
+      [ERMS]
+      [FAKTOR]
+      [Biblioteksvagten]
+      [FFU CMS]
+      [VIP]
+      [Netpunkt]
+      [Bob]
+      [OpenSource DBC]
+      [Open Cataloguing]
+      [FBS Admin]
+    }
+}
+}
+@enduml
+
+PlantUML version 1.2021.01beta3(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
