@@ -3,6 +3,6 @@
 ## Material List flow
 ![Clients](clients.svg)
 ![OpenPlatform](OpenPlatform.svg)
-![Services](Services.svg)
+![Services](services.svg)
 ![Dataplatforms](dataplatforms.svg)
 
