@@ -1,0 +1,20 @@
+@startuml
+'header SayHello
+'footer Page %page% of %lastpage%
+
+skinparam component {
+    backgroundColor [Biblio] LightGray
+}
+
+
+    package "Den Åbne Platform" {
+      [Cms]
+      [Search]
+      [Libraries]
+      [Recommend]
+      [Status]
+      [Suggester]
+      [Itemholdings]
+    }
+    
+@enduml
