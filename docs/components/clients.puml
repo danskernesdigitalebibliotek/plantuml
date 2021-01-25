@@ -1,0 +1,48 @@
+@startuml
+'header SayHello
+'footer Page %page% of %lastpage%
+
+skinparam component {
+    backgroundColor [Biblio] LightGray
+}
+
+
+package "Klienter/brugergrænseflader" {
+ together {
+    package "Borgere" {
+      [Bibliotek.dk]
+      [Biblio] #LightGray
+      [Bibzoom] #LightGray
+      [FFU portaler]
+      [Brugerportalsinitiativet] #LightGray
+      [DDB CMS]
+      [Filmstriben]
+      [FBS Skoleportl]
+      [eReolen]
+      [Arthesis]
+      [Faktorlink]
+      [Forfatterweb]
+      [Litteratursiden]
+      [Filmcentralen]
+      [Nota]
+      [Biblioteksvagten]
+      [Borger.dk]
+      [Finurlige Fakta]
+      [Biblioteket App]
+    }
+    
+    package "Personale" {
+      [ERMS]
+      [FAKTOR]
+      [Biblioteksvagten]
+      [FFU CMS]
+      [VIP]
+      [Netpunkt]
+      [Bob]
+      [OpenSource DBC]
+      [Open Cataloguing]
+      [FBS Admin]
+    }
+}
+}
+@enduml
