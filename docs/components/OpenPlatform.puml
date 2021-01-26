@@ -6,16 +6,20 @@ skinparam component {
     backgroundColor [Biblio] LightGray
 }
 
-
-    package "Den Åbne Platform" {
+package "Den Åbne Platform" {
     together {
+      [Order]
       [Cms]
       [Search]
       [Libraries]
       [Recommend]
       [Status]
-      [Suggester]
-      [Itemholdings]
+      [Suggest]
+      [Beta/workpresentation] #Khaki
+      [Community] #LightGray
+      note bottom of [Beta/workpresentation]: Currently Beta
+      note bottom of [Community]: Alpha and not documented. Avoid using this end-point
     }
-    }
+}
+
 @enduml
