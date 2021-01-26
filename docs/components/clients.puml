@@ -15,26 +15,26 @@ package "Klienter/brugergrænseflader" {
       [Bibzoom] #LightGray
       [FFU portaler]
       [Brugerportalsinitiativet] #LightGray
-      [DDB CMS]
+      [DDB CMS] #Cyan
       [Filmstriben]
       [FBS Skoleportl]
-      [eReolen]
+      [eReolen] #Cyan
       [Arthesis]
       [Faktorlink]
       [Forfatterweb]
-      [Litteratursiden]
+      [Litteratursiden] #Cyan
       [Filmcentralen]
       [Nota]
-      [Biblioteksvagten]
+      [Biblioteksvagten] #Cyan
       [Borger.dk]
       [Finurlige Fakta]
-      [Biblioteket App]
+      [Biblioteket App] #Cyan
     }
     
     package "Personale" {
-      [ERMS]
-      [FAKTOR]
-      [Biblioteksvagten]
+      [ERMS] #Cyan
+      [FAKTOR] #Cyan
+      [Biblioteksvagten] #Cyan
       [FFU CMS]
       [VIP]
       [Netpunkt]
