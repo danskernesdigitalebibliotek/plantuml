@@ -1,6 +1,6 @@
 @startuml
-caption DDB CMS User authentification (Adgangsplatformen)
-'Single Sign On
+
+title Single sign-on
 
 ' Skinparams '
 skinparam monochrome true
